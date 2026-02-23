@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Empty Nest Check-In Loop Reset | A 7-Day Interactive Workbook</title>
+<meta name="description" content="A 7-day interactive workbook for empty nest moms who want to break the texting loop and build a calmer, steadier evening routine. By Susan, The Second Bloom.">
+<meta property="og:title" content="The Empty Nest Check-In Loop Reset">
+<meta property="og:description" content="7 days. 10 minutes a night. Break the check-in loop and reclaim your evenings.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<!-- [PLACEHOLDER: Add og:image and og:url once hosted] -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<!-- ═══ COVER ═══ -->
+<div id="cover" class="cover" role="banner">
+  <div class="cover-badge">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+    Interactive Workbook
+  </div>
+  <div class="cover-eyebrow">A 7-Day Interactive Workbook</div>
+  <h1 class="cover-title">The Empty Nest<br>Check-In Loop Reset</h1>
+  <div class="cover-divider" aria-hidden="true"></div>
+  <p class="cover-hook">You checked your phone <strong>three times</strong> while reading this sentence. Not because they called. Not because something happened. Because the quiet got too loud, and your hand just reached for them on its own.</p>
+
+  <div class="cover-qualifier">
+    <div class="cover-qualifier-label">This is for you if</div>
+    <div class="qualifier-item"><span class="qualifier-check" aria-hidden="true">&#10003;</span><span>You text your grown kids more than you want to admit, and you know it is more about you than about them</span></div>
+    <div class="qualifier-item"><span class="qualifier-check" aria-hidden="true">&#10003;</span><span>The evenings feel too quiet and your phone keeps ending up in your hand</span></div>
+    <div class="qualifier-item"><span class="qualifier-check" aria-hidden="true">&#10003;</span><span>You are ready to feel steady on your own, without needing a reply to feel okay</span></div>
+    <div class="qualifier-item"><span class="qualifier-check" aria-hidden="true">&#10003;</span><span>You want a simple, private framework you can do in 10 minutes a night</span></div>
+  </div>
+
+  <div class="cover-meta">
+    <div class="meta-item"><div class="meta-value">7</div><div class="meta-label">Days</div></div>
+    <div class="meta-item"><div class="meta-value">10</div><div class="meta-label">Min / Night</div></div>
+    <div class="meta-item"><div class="meta-value">Yours</div><div class="meta-label">Your Pace</div></div>
+  </div>
+
+  <button class="start-btn" onclick="showPage('welcome')" aria-label="Begin the workbook">Begin Your Reset</button>
+  <div class="disclaimer">This workbook is educational content only. It is not therapy, medical advice, or a substitute for professional support. If you are in crisis, please contact a licensed professional.</div>
+</div>
+
+<!-- ═══ PAGES ═══ -->
+<div id="pages-wrapper" role="main" id="main-content">
+
+  <!-- Progress Bar -->
+  <div class="progress-track" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Workbook progress">
+    <div class="progress-fill" id="progressBar"></div>
+  </div>
+
+  <!-- Top Nav -->
+  <nav class="top-nav" aria-label="Page navigation">
+    <button class="nav-btn" id="prevBtn" onclick="prevPage()" aria-label="Previous page">&larr; Back</button>
+    <span class="nav-label" id="navLabel" aria-live="polite">Welcome</span>
+    <button class="nav-btn" id="nextBtn" onclick="nextPage()" aria-label="Next page">Next &rarr;</button>
+  </nav>
+
+  <!-- ═══ WELCOME ═══ -->
+  <div id="page-welcome" class="page">
+    <div class="welcome-page">
+      <h1>Hi, I'm Susan.</h1>
+      <p>And I built this workbook because I know what it feels like to sit in a quiet house at night and not know what to do with yourself.</p>
+      <p>The kids are gone. The evenings are long. And your phone keeps ending up in your hand, not because you have anything to say, but because the silence feels like too much.</p>
+      <p>This is not a problem to fix. It is a season to learn how to navigate. And that is exactly what we are going to do together over the next 7 nights.</p>
+      <p><strong>How this works:</strong> Each night, you will spend about 10 minutes working through a short reset. There is no catching up. If you miss a day, just start wherever you are. Every page stands on its own.</p>
+      <p>You are going to be okay. Better than okay, actually. Let's start.</p>
+      <div class="welcome-sign">Susan, The Second Bloom</div>
+
+      <div class="authority-box">
+        <p>Susan has spent years working with empty nest mothers navigating this exact transition. She has guided hundreds of women through the process of putting the phone down, reconnecting with themselves, and building evening routines that actually feel good. This workbook is built on the patterns she has seen work over and over again.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ BASELINE ═══ -->
+  <div id="page-baseline" class="page">
+    <div class="urge-scale-section">
+      <h2>Your Starting Point</h2>
+      <p>Before we begin, let's get a snapshot of where you are right now. Slide the scale to the number that feels most true tonight.</p>
+      <div class="urge-slider-wrap">
+        <input type="range" class="urge-slider" id="urgeSliderBaseline" data-field="baseline-urge" min="1" max="10" value="5" aria-label="Texting urge scale, 1 is completely calm and 10 is full spiral">
+        <div class="urge-labels"><span>1 Calm</span><span>10 Full spiral</span></div>
+      </div>
+      <div class="urge-display" id="urgeDisplayBaseline">
+        <div class="urge-number">5</div>
+        <div class="urge-state">Pulled</div>
+        <div class="urge-desc">The urge is there. You are thinking about texting.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ CONTENTS ═══ -->
+  <div id="page-contents" class="page">
+    <div class="contents-page">
+      <div class="contents-header">
+        <h1>What's Inside</h1>
+        <p>7 Days &middot; 10 Minutes a Night</p>
+      </div>
+      <div class="contents-list" role="list">
+        <div class="contents-item" role="listitem" tabindex="0" onclick="showPage('day1')" onkeydown="if(event.key==='Enter')showPage('day1')">
+          <div class="contents-num">Day 1</div>
+          <div class="contents-item-text">
+            <div class="contents-item-title">The Trigger Map</div>
+            <div class="contents-item-sub">And your "Before You Text" rule</div>
+          </div>
+          <div class="contents-badge" id="badge-day1" aria-label="Completion status"></div>
+          <div class="contents-arrow" aria-hidden="true">&rarr;</div>
+        </div>
+        <div class="contents-item" role="listitem" tabindex="0" onclick="showPage('day2')" onkeydown="if(event.key==='Enter')showPage('day2')">
+          <div class="contents-num">Day 2</div>
+          <div class="contents-item-text">
+            <div class="contents-item-title">The Reassurance Reset</div>
+            <div class="contents-item-sub">I still matter</div>
+          </div>
+          <div class="contents-badge" id="badge-day2" aria-label="Completion status"></div>
+          <div class="contents-arrow" aria-hidden="true">&rarr;</div>
+        </div>
+        <div class="contents-item" role="listitem" tabindex="0" onclick="showPage('day3')" onkeydown="if(event.key==='Enter')showPage('day3')">
+          <div class="contents-num">Day 3</div>
+          <div class="contents-item-text">
+            <div class="contents-item-title">The Belonging Reset</div>
+            <div class="contents-item-sub">I'm not alone</div>
+          </div>
+          <div class="contents-badge" id="badge-day3" aria-label="Completion status"></div>
+          <div class="contents-arrow" aria-hidden="true">&rarr;</div>
+        </div>
+        <div class="contents-item" role="listitem" tabindex="0" onclick="showPage('day4')" onkeydown="if(event.key==='Enter')showPage('day4')">
+          <div class="contents-num">Day 4</div>
+          <div class="contents-item-text">
+            <div class="contents-item-title">The Needed Reset</div>
+            <div class="contents-item-sub">I'm still useful, by choice</div>
+          </div>
+          <div class="contents-badge" id="badge-day4" aria-label="Completion status"></div>
+          <div class="contents-arrow" aria-hidden="true">&rarr;</div>
+        </div>
+        <div class="contents-item" role="listitem" tabindex="0" onclick="showPage('day5')" onkeydown="if(event.key==='Enter')showPage('day5')">
+          <div class="contents-num">Day 5</div>
+          <div class="contents-item-text">
+            <div class="contents-item-title">The Closeness Reset</div>
+            <div class="contents-item-sub">Connected, without the anxiety</div>
+          </div>
+          <div class="contents-badge" id="badge-day5" aria-label="Completion status"></div>
+          <div class="contents-arrow" aria-hidden="true">&rarr;</div>
+        </div>
+        <div class="contents-item" role="listitem" tabindex="0" onclick="showPage('day6')" onkeydown="if(event.key==='Enter')showPage('day6')">
+          <div class="contents-num">Day 6</div>
+          <div class="contents-item-text">
+            <div class="contents-item-title">The Weekend Anchor Map</div>
+            <div class="contents-item-sub">Give your weekend just enough structure</div>
+          </div>
+          <div class="contents-badge" id="badge-day6" aria-label="Completion status"></div>
+          <div class="contents-arrow" aria-hidden="true">&rarr;</div>
+        </div>
+        <div class="contents-item" role="listitem" tabindex="0" onclick="showPage('day7')" onkeydown="if(event.key==='Enter')showPage('day7')">
+          <div class="contents-num">Day 7</div>
+          <div class="contents-item-text">
+            <div class="contents-item-title">Weekly Rhythm + Backslide Plan</div>
+            <div class="contents-item-sub">Building your new normal</div>
+          </div>
+          <div class="contents-badge" id="badge-day7" aria-label="Completion status"></div>
+          <div class="contents-arrow" aria-hidden="true">&rarr;</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ DAY 1: THE TRIGGER MAP ═══ -->
+  <div id="page-day1" class="page" data-day="1">
+    <div class="day-hero terra">
+      <div class="container">
+        <div class="day-eyebrow">Day 1 of 7</div>
+        <h2 class="day-title">The Trigger Map</h2>
+        <p class="day-subtitle">And Your "Before You Text" Rule</p>
+        <div class="goal-box">Tonight's goal: Catch the moment before the loop starts, so you can pause and choose what you actually need.</div>
+        <p class="grace-note">If you missed yesterday, just start here. There is no catching up to do.</p>
+      </div>
+    </div>
+    <div class="day-content container">
+      <p>The evenings can feel really quiet at first. And that is completely okay. This is not you being dramatic. It is a real transition. But just know that on the other side of this is a version of you who is eating whatever she wants for dinner, watching whatever she wants on TV, and not once asking anyone to please just clean the bathroom. That version of you is coming. Tonight we start.</p>
+
+      <!-- Step 1 -->
+      <div class="step-block">
+        <button class="step-trigger">
+          <div class="step-circle terra">1</div>
+          <div class="step-title-wrap"><div class="step-title">Name Your Two Biggest Trigger Windows</div><div class="step-mins">2 min</div></div>
+          <span class="step-check-icon">&#10003;</span>
+          <span class="step-chevron">&#9662;</span>
+        </button>
+        <div class="step-body"><div class="step-body-inner">
+          <p>In the <strong>evenings</strong> I feel the urge to text when...</p>
+          <div class="checkbox-grid two-col">
+            <label class="check-item"><input type="checkbox" data-field="d1-trig-evening-quiet"><span>The house gets quiet</span></label>
+            <label class="check-item"><input type="checkbox" data-field="d1-trig-evening-ends"><span>I sit down and the day "ends"</span></label>
+            <label class="check-item"><input type="checkbox" data-field="d1-trig-evening-reminds"><span>I see something that reminds me of them</span></label>
+            <label class="check-item"><input type="checkbox" data-field="d1-trig-evening-racing"><span>I'm tired and my mind starts racing</span></label>
+          </div>
+          <div class="field-group"><label class="field-label">Other evening trigger:</label><textarea class="short" data-field="d1-trig-evening-other" placeholder="Whatever comes up is perfect..."></textarea></div>
+
+          <p style="margin-top:20px;">On <strong>weekends</strong> I feel the urge to text when...</p>
+          <div class="checkbox-grid two-col">
+            <label class="check-item"><input type="checkbox" data-field="d1-trig-weekend-noplan"><span>I wake up without a plan</span></label>
+            <label class="check-item"><input type="checkbox" data-field="d1-trig-weekend-alone"><span>I'm alone more than usual</span></label>
+            <label class="check-item"><input type="checkbox" data-field="d1-trig-weekend-scroll"><span>I'm scrolling and feel left out</span></label>
+            <label class="check-item"><input type="checkbox" data-field="d1-trig-weekend-silence"><span>I'm doing chores and the silence hits</span></label>
+          </div>
+          <div class="field-group"><label class="field-label">Other weekend trigger:</label><textarea class="short" data-field="d1-trig-weekend-other" placeholder="Whatever comes up is perfect..."></textarea></div>
+
+          <div class="education-box">
+            <div class="education-label">Why this happens</div>
+            <p>Trigger windows are moments when your brain shifts from "busy" to "unoccupied," and that shift creates a gap. Your nervous system, trained by years of parenting, fills that gap with the most familiar action it knows: reaching for your kids. The quiet is not the problem. It is the signal your brain sends to reconnect. Once you name the trigger, you can start to interrupt the automatic response and choose something different.</p>
+            <div class="education-disclaimer">Educational context, not medical advice.</div>
+          </div>
+        </div></div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step-block">
+        <button class="step-trigger">
+          <div class="step-circle terra">2</div>
+          <div class="step-title-wrap"><div class="step-title">What Are You Actually Needing?</div><div class="step-mins">1 min</div></div>
+          <span class="step-check-icon">&#10003;</span>
+          <span class="step-chevron">&#9662;</span>
+        </button>
+        <div class="step-body"><div class="step-body-inner">
+          <p>When you want to text, you're usually needing one of these. Check yours:</p>
+          <div class="checkbox-grid two-col">
+            <label class="check-item"><input type="checkbox" data-field="d1-need-reassurance"><span>Reassurance</span></label>
+            <label class="check-item"><input type="checkbox" data-field="d1-need-belonging"><span>Belonging</span></label>
+            <label class="check-item"><input type="checkbox" data-field="d1-need-needed"><span>To feel needed</span></label>
+            <label class="check-item"><input type="checkbox" data-field="d1-need-closeness"><span>Closeness</span></label>
+          </div>
+          <div class="field-group"><label class="field-label">"Right now, I'm really needing..."</label><textarea class="short" data-field="d1-need-freetext" placeholder="Even one word counts..."></textarea></div>
+
+          <div class="education-box">
+            <div class="education-label">The dopamine loop</div>
+            <p>When you send a text, your brain gets a small hit of dopamine in anticipation of a reply. That anticipation creates a loop: text, wait, check, repeat. The urge to text is not really about the message. It is about the relief your brain expects from the response. Understanding this helps you see that the pull is chemical, not emotional failure. You are not weak. Your brain is doing exactly what it was designed to do.</p>
+            <div class="education-disclaimer">Educational context, not medical advice.</div>
+          </div>
+        </div></div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="step-block">
+        <button class="step-trigger">
+          <div class="step-circle terra">3</div>
+          <div class="step-title-wrap"><div class="step-title">Your "Before You Text" Rule</div><div class="step-mins">3 min</div></div>
+          <span class="step-check-icon">&#10003;</span>
+          <span class="step-chevron">&#9662;</span>
+        </button>
+        <div class="step-body"><div class="step-body-inner">
+          <div class="quote-block">"When I feel the urge to text in the evenings or on weekends, I will do the 10 minute reset first. Then I will decide from a calmer place."</div>
+          <div class="inline-fields">
+            <div class="field-group"><label class="field-label">Name:</label><input type="text" data-field="d1-rule-name" placeholder="Sign your name..."></div>
+            <div class="field-group"><label class="field-label">Date:</label><input type="text" data-field="d1-rule-date" placeholder="Today's date..."></div>
+          </div>
+        </div></div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="step-block">
+        <button class="step-trigger">
+          <div class="step-circle terra">4</div>
+          <div class="step-title-wrap"><div class="step-title">Choose Your Reset for Tonight</div><div class="step-mins">4 min</div></div>
+          <span class="step-check-icon">&#10003;</span>
+          <span class="step-chevron">&#9662;</span>
+        </button>
+        <div class="step-body"><div class="step-body-inner">
+          <p>Pick <strong>one</strong> (keep it simple):</p>
+          <div class="checkbox-grid">
+            <label class="check-item"><input type="checkbox" data-field="d1-reset-reassurance"><span><strong>Reassurance Reset:</strong> Write 3 sentences that remind you who you are, beyond just being a mom.</span></label>
+            <label class="check-item"><input type="checkbox" data-field="d1-reset-belonging"><span><strong>Belonging Reset:</strong> Write the name of one adult you can reach out to this week.</span></label>
+            <label class="check-item"><input type="checkbox" data-field="d1-reset-needed"><span><strong>Needed Reset:</strong> Choose one small thing you will do this week, something you actually want to do.</span></label>
+            <label class="check-item"><input type="checkbox" data-field="d1-reset-closeness"><span><strong>Closeness Reset:</strong> If you still want to text after your reset, go ahead and send something warm and low pressure.</span></label>
+          </div>
+          <div class="field-group"><label class="field-label">Your reset notes (write what came up for you):</label><textarea class="tall" data-field="d1-reset-notes" placeholder="Take your time, this one is worth it..."></textarea></div>
+          <div class="option-pill">Try something like this: <em>"Thinking of you, no need to reply. Hope your day is going well."</em></div>
+        </div></div>
+      </div>
+
+      <!-- Step 5 -->
+      <div class="step-block">
+        <button class="step-trigger">
+          <div class="step-circle terra">5</div>
+          <div class="step-title-wrap"><div class="step-title">Close Tonight</div><div class="step-mins">1 min</div></div>
+          <span class="step-check-icon">&#10003;</span>
+          <span class="step-chevron">&#9662;</span>
+        </button>
+        <div class="step-body"><div class="step-body-inner">
+          <div class="close-prompt-section" style="margin-top:0; padding-top:0; border-top:none;">
+            <div class="close-prompt-label">Close</div>
+            <div class="field-group"><label class="field-label">"Even though this season feels different, I'm proud of myself for..."</label><textarea class="short" data-field="d1-close" placeholder="Just one sentence, you've got this..."></textarea></div>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="share-card">
+        <div class="share-label">Today's reminder worth saving</div>
+        <div class="share-quote">"I can feel the urge without acting on it. That is growth."</div>
+        <div class="share-byline">The Second Bloom &middot; Susan</div>
+        <button class="share-btn" onclick="shareQuote(this)">&#128203; Copy quote</button>
+      </div>
+
+      <div class="reminder-box">You do not have to fix everything tonight. You just have to do the next 10 minutes. That is it. And then you can go to bed whenever you want, nobody is coming in late from a concert. Now actually falling asleep, well, that is a whole other conversation involving menopause but at least the waiting up part is handled.</div>
+
+      <div class="reflection-summary">
+        <div class="reflection-summary-label">Day 1 Reflection</div>
+        <div class="reflection-summary-text">Tonight you mapped the moments when the urge hits hardest, named what you are actually needing underneath it, and signed your own "Before You Text" rule. That is a real foundation. Tomorrow we go deeper into the first need: reassurance.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ DAY 2: THE REASSURANCE RESET ═══ -->
+  <div id="page-day2" class="page" data-day="2">
+    <div class="day-hero sage">
+      <div class="container">
+        <div class="day-eyebrow">Day 2 of 7</div>
+        <h2 class="day-title">The Reassurance Reset</h2>
+        <p class="day-subtitle">I Still Matter</p>
+        <div class="goal-box">Tonight's goal: Calm the part of you that is searching for proof you still matter, so you can feel steady without needing a reply from them.</div>
+        <p class="grace-note">If you missed yesterday, just start here. There is no catching up to do.</p>
+      </div>
+    </div>
+    <div class="day-content container">
+
+      <!-- Step 1 -->
+      <div class="step-block">
+        <button class="step-trigger">
+          <div class="step-circle sage">1</div>
+          <div class="step-title-wrap"><div class="step-title">The 60-Second Pause</div><div class="step-mins">1 min</div></div>
+          <span class="step-check-icon">&#10003;</span>
+          <span class="step-chevron">&#9662;</span>
+        </button>
+        <div class="step-body"><div class="step-body-inner">
+          <div class="quote-block">"This is temporary. It will pass." (And yes, that applies to both the empty nest feeling AND the hot flash. You are welcome.)</div>
+        </div></div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step-block">
+        <button class="step-trigger">
+          <div class="step-circle sage">2</div>
+          <div class="step-title-wrap"><div class="step-title">Name What You're Needing</div><div class="step-mins">1 min</div></div>
+          <span class="step-check-icon">&#10003;</span>
+          <span class="step-chevron">&#9662;</span>
+        </button>
+        <div class="step-body"><div class="step-body-inner">
+          <div class="checkbox-grid two-col">
+            <label class="check-item sage-check"><input type="checkbox" data-field="d2-need-reassurance"><span>Reassurance</span></label>
+            <label class="check-item sage-check"><input type="checkbox" data-field="d2-need-belonging"><span>Belonging</span></label>
+            <label class="check-item sage-check"><input type="checkbox" data-field="d2-need-needed"><span>To feel needed</span></label>
+            <label class="check-item sage-check"><input type="checkbox" data-field="d2-need-closeness"><span>Closeness</span></label>
+          </div>
+          <div class="field-group"><label class="field-label">"Right now, I'm needing reassurance because..."</label><textarea class="short" data-field="d2-need-why" placeholder="No wrong answers here..."></textarea></div>
+
+          <div class="education-box">
+            <div class="education-label">Why this happens</div>
+            <p>Reassurance-seeking is one of the most common patterns in the empty nest transition. After years of being needed constantly, your sense of worth became intertwined with being useful to your kids. When they leave, the brain interprets the silence as rejection, even when it is not. Reaching for your phone is your nervous system trying to confirm that you still matter. You do. But the confirmation needs to come from inside you, not from a text reply.</p>
+            <div class="education-disclaimer">Educational context, not medical advice.</div>
+          </div>
+        </div></div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="step-block">
+        <button class="step-trigger">
+          <div class="step-circle sage">3</div>
+          <div class="step-title-wrap"><div class="step-title">The "I Still Matter" Proof</div><div class="step-mins">5 min</div></div>
+          <span class="step-check-icon">&#10003;</span>
+          <span class="step-chevron">&#9662;</span>
+        </button>
+        <div class="step-body"><div class="step-body-inner">
+          <p><strong>A)</strong> Three ways I mattered today (even in small ways):</p>
+          <div class="field-group"><textarea class="tall" data-field="d2-proof-a" placeholder="1.&#10;2.&#10;3."></textarea></div>
+          <p><strong>B)</strong> Three qualities I have that are not tied to mom duties:</p>
+          <div class="field-group"><textarea class="tall" data-field="d2-proof-b" placeholder="1.&#10;2.&#10;3."></textarea></div>
+          <p><strong>C)</strong> One sentence I needed to hear back then (and still need now):</p>
+          <div class="field-group"><textarea class="short" data-field="d2-proof-c" placeholder="Whatever comes up is perfect..."></textarea></div>
+        </div></div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="step-block">
+        <button class="step-trigger">
+          <div class="step-circle sage">4</div>
+          <div class="step-title-wrap"><div class="step-title">One Tiny Self-Honoring Action</div><div class="step-mins">2 min</div></div>
+          <span class="step-check-icon">&#10003;</span>
+          <span class="step-chevron">&#9662;</span>
+        </button>
+        <div class="step-body"><div class="step-body-inner">
+          <div class="field-group"><label class="field-label">My choice for tonight:</label><textarea class="short" data-field="d2-action" placeholder="Something just for you, no one else's needs involved..."></textarea></div>
+        </div></div>
+      </div>
+
+      <!-- Step 5 -->
+      <div class="step-block">
+        <button class="step-trigger">
+          <div class="step-circle sage">5</div>
+          <div class="step-title-wrap"><div class="step-title">The "Before You Text" Choice</div><div class="step-mins">1 min</div></div>
+          <span class="step-check-icon">&#10003;</span>
+          <span class="step-chevron">&#9662;</span>
+        </button>
+        <div class="step-body"><div class="step-body-inner">
+          <p>Ask yourself honestly: <em>Am I texting because I want to connect, or because I need to feel better right now?</em></p>
+          <div class="quote-block">"I can take care of myself first. Real connection can come from a steadier place."</div>
+          <div class="close-prompt-section" style="margin-top:16px;">
+            <div class="close-prompt-label">Close</div>
+            <div class="field-group"><label class="field-label">"I matter because..."</label><textarea class="short" data-field="d2-close" placeholder="Just one sentence, you've got this..."></textarea></div>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="share-card">
+        <div class="share-label">Today's reminder worth saving</div>
+        <div class="share-quote">"I matter not because of what I do, but because of who I am."</div>
+        <div class="share-byline">The Second Bloom &middot; Susan</div>
+        <button class="share-btn" onclick="shareQuote(this)">&#128203; Copy quote</button>
+      </div>
+
+      <div class="reminder-box">You are so much more than what you do for other people. And honestly? The woman who raised those kids and kept that whole house running is pretty impressive. Do not forget that.</div>
+
+      <div class="reflection-summary">
+        <div class="reflection-summary-label">Day 2 Reflection</div>
+        <div class="reflection-summary-text">Tonight you proved to yourself that you matter, outside of your role as mom. You named it, wrote it down, and chose one small action just for you. Tomorrow we work on belonging.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ DAY 3: THE BELONGING RESET ═══ -->
+  <div id="page-day3" class="page" data-day="3">
+    <div class="day-hero terra">
+      <div class="container">
+        <div class="day-eyebrow">Day 3 of 7</div>
+        <h2 class="day-title">The Belonging Reset</h2>
+        <p class="day-subtitle">I'm Not Alone</p>
+        <div class="goal-box">Tonight's goal: Start building a sense of connection that does not depend on your kids being available.</div>
+        <p class="grace-note">If you missed yesterday, just start here. There is no catching up to do.</p>
+      </div>
+    </div>
+    <div class="day-content container">
+
+      <!-- Step 1 -->
+      <div class="step-block">
+        <button class="step-trigger">
+          <div class="step-circle terra">1</div>
+          <div class="step-title-wrap"><div class="step-title">Pause</div><div class="step-mins">1 min</div></div>
+          <span class="step-check-icon">&#10003;</span>
+          <span class="step-chevron">&#9662;</span>
+        </button>
+        <div class="step-body"><div class="step-body-inner">
+          <div class="quote-block">"Tonight I don't need to fix everything. I just need one thread of connection."</div>
+        </div></div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step-block">
+        <button class="step-trigger">
+          <div class="step-circle terra">2</div>
+          <div class="step-title-wrap"><div class="step-title">Name What You're Needing</div><div class="step-mins">1 min</div></div>
+          <span class="step-check-icon">&#10003;</span>
+          <span class="step-chevron">&#9662;</span>
+        </button>
+        <div class="step-body"><div class="step-body-inner">
+          <div class="field-group"><label class="field-label">"Right now, I'm needing belonging because..."</label><textarea class="short" data-field="d3-need-why" placeholder="No wrong answers here..."></textarea></div>
+        </div></div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="step-block">
+        <button class="step-trigger">
+          <div class="step-circle terra">3</div>
+          <div class="step-title-wrap"><div class="step-title">Your Belonging List</div><div class="step-mins">3 min</div></div>
+          <span class="step-check-icon">&#10003;</span>
+          <span class="step-chevron">&#9662;</span>
+        </button>
+        <div class="step-body"><div class="step-body-inner">
+          <p>Write 3 adults in your life who feel kind and safe. Here are some examples to get you started:</p>
+          <p style="font-size:14px; color:var(--brown); font-style:italic; margin:8px 0 12px 0;">Like your neighbor Kathy who always says hi, your sister who picks up when you call, or that old coworker you keep meaning to grab coffee with.</p>
+          <div class="field-group"><textarea class="tall" data-field="d3-belonging-list" placeholder="1.&#10;2.&#10;3."></textarea></div>
+          <p><em>Think about which one of them would most likely pick up or respond. That is your person for this week.</em></p>
+        </div></div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="step-block">
+        <button class="step-trigger">
+          <div class="step-circle terra">4</div>
+          <div class="step-title-wrap"><div class="step-title">Send the Simplest Reach-Out</div><div class="step-mins">4 min</div></div>
+          <span class="step-check-icon">&#10003;</span>
+          <span class="step-chevron">&#9662;</span>
+        </button>
+        <div class="step-body"><div class="step-body-inner">
+          <p>Pick one to send (feel free to copy/paste!):</p>
+          <div class="option-pill">"Hey, do you have 10 minutes this week to catch up? I would love that."</div>
+          <div class="option-pill">"Want to grab a walk or coffee this week?"</div>
+          <div class="option-pill">"I have been going through a bit of a new season and would love to get together soon."</div>
+          <div class="field-group"><label class="field-label">If you cannot send it tonight, write down when you will:</label><input type="text" data-field="d3-reachout-when" placeholder="Day / time..."></div>
+          <div class="close-prompt-section" style="margin-top:16px;">
+            <div class="close-prompt-label">Close</div>
+            <div class="field-group"><label class="field-label">"Feeling connected for me can look like..."</label><textarea class="short" data-field="d3-close" placeholder="Just one sentence, you've got this..."></textarea></div>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="share-card">
+        <div class="share-label">Today's reminder worth saving</div>
+        <div class="share-quote">"Connection does not have to come from my kids to count."</div>
+        <div class="share-byline">The Second Bloom &middot; Susan</div>
+        <button class="share-btn" onclick="shareQuote(this)">&#128203; Copy quote</button>
+      </div>
+
+      <div class="reminder-box">One small reach-out really does change everything. And here is a bonus, you will actually show up on time now. No more sitting in the car waiting while someone decides at the last minute that the first three outfits just were not it.</div>
+
+      <!-- Email capture after Day 3 -->
+      <div class="email-capture">
+        <button class="email-capture-trigger" onclick="toggleEmailCapture()">
+          <span class="email-icon">&#9993;</span>
+          <span class="email-capture-title">Want a weekly check-in prompt?</span>
+          <span class="email-capture-chevron">&#9662;</span>
+        </button>
+        <div class="email-capture-body"><div class="email-capture-inner">
+          <p>No spam, just a simple nudge each week to keep your reset going.</p>
+          <form class="email-form" action="[PLACEHOLDER: ConvertKit form URL]" method="post">
+            <input type="email" placeholder="Your email address..." required>
+            <button type="submit" class="email-submit">Send me prompts</button>
+          </form>
+          <div class="email-privacy">Your email stays between us. Always. Unsubscribe anytime.</div>
+        </div></div>
+      </div>
+
+      <div class="reflection-summary">
+        <div class="reflection-summary-label">Day 3 Reflection</div>
+        <div class="reflection-summary-text">Tonight you identified your people and made a plan to reach out. One thread of adult connection can shift an entire week. Tomorrow we tackle the need to feel needed.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ DAY 4: THE NEEDED RESET ═══ -->
+  <div id="page-day4" class="page" data-day="4">
+    <div class="day-hero sage">
+      <div class="container">
+        <div class="day-eyebrow">Day 4 of 7</div>
+        <h2 class="day-title">The Needed Reset</h2>
+        <p class="day-subtitle">I'm Still Useful, By Choice</p>
+        <div class="goal-box">Tonight's goal: Start shifting from feeling like you need to be needed, to choosing how you want to show up.</div>
+        <p class="grace-note">If you missed yesterday, just start here. There is no catching up to do.</p>
+      </div>
+    </div>
+    <div class="day-content container">
+
+      <!-- Step 1 -->
+      <div class="step-block">
+        <button class="step-trigger">
+          <div class="step-circle sage">1</div>
+          <div class="step-title-wrap"><div class="step-title">Pause</div><div class="step-mins">1 min</div></div>
+          <span class="step-check-icon">&#10003;</span>
+          <span class="step-chevron">&#9662;</span>
+        </button>
+        <div class="step-body"><div class="step-body-inner">
+          <div class="quote-block">"I am still needed. I just get to decide when and how now." No more being on standby at 11pm wondering if they need a ride home from somewhere.</div>
+        </div></div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step-block">
+        <button class="step-trigger">
+          <div class="step-circle sage">2</div>
+          <div class="step-title-wrap"><div class="step-title">Name What You're Needing</div><div class="step-mins">1 min</div></div>
+          <span class="step-check-icon">&#10003;</span>
+          <span class="step-chevron">&#9662;</span>
+        </button>
+        <div class="step-body"><div class="step-body-inner">
+          <div class="field-group"><label class="field-label">"Right now, I'm needing to feel needed because..."</label><textarea class="short" data-field="d4-need-why" placeholder="No wrong answers here..."></textarea></div>
+        </div></div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="step-block">
+        <button class="step-trigger">
+          <div class="step-circle sage">3</div>
+          <div class="step-title-wrap"><div class="step-title">Spot the Pattern</div><div class="step-mins">3 min</div></div>
+          <span class="step-check-icon">&#10003;</span>
+          <span class="step-chevron">&#9662;</span>
+        </button>
+        <div class="step-body"><div class="step-body-inner">
+          <p>When I feel the urge to be needed, I tend to...</p>
+          <div class="checkbox-grid">
+            <label class="check-item sage-check"><input type="checkbox" data-field="d4-pattern-offer"><span>Offer help before I'm asked</span></label>
+            <label class="check-item sage-check"><input type="checkbox" data-field="d4-pattern-text"><span>Text my kids to see if they need anything</span></label>
+            <label class="check-item sage-check"><input type="checkbox" data-field="d4-pattern-worry"><span>Worry about their problems like they're mine to solve</span></label>
+            <label class="check-item sage-check"><input type="checkbox" data-field="d4-pattern-busy"><span>Stay busy so I don't feel the emptiness</span></label>
+          </div>
+          <div class="field-group"><label class="field-label">Other:</label><textarea class="short" data-field="d4-pattern-other" placeholder="Anything else you notice?"></textarea></div>
+
+          <div class="education-box">
+            <div class="education-label">Why this happens</div>
+            <p>The "needed" pattern runs deep. For most mothers, being needed was not just a role, it was an identity. When the daily demands disappear, the brain interprets the lack of being needed as a loss of purpose. This is not a character flaw. It is a pattern built over years of caregiving. The shift is moving from "I need to be needed" to "I choose how I contribute." That small change in framing puts you back in the driver's seat.</p>
+            <div class="education-disclaimer">Educational context, not medical advice.</div>
+          </div>
+        </div></div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="step-block">
+        <button class="step-trigger">
+          <div class="step-circle sage">4</div>
+          <div class="step-title-wrap"><div class="step-title">Choose a "Chosen Contribution"</div><div class="step-mins">4 min</div></div>
+          <span class="step-check-icon">&#10003;</span>
+          <span class="step-chevron">&#9662;</span>
+        </button>
+        <div class="step-body"><div class="step-body-inner">
+          <p>Instead of waiting to be needed, pick something you <strong>choose</strong> to do. Something small, something that feels like you, not something you feel obligated to do.</p>
+          <div class="field-group"><label class="field-label">"In the next 24 to 48 hours, I will..."</label><textarea class="short" data-field="d4-contribution" placeholder="Something you choose, not something you feel obligated to do..."></textarea></div>
+          <div class="field-group"><label class="field-label">Day / time:</label><input type="text" data-field="d4-contribution-when" placeholder="When will you do it?"></div>
+          <div class="close-prompt-section" style="margin-top:16px;">
+            <div class="close-prompt-label">Close</div>
+            <div class="field-group"><label class="field-label">"I am still useful because..."</label><textarea class="short" data-field="d4-close" placeholder="Just one sentence, you've got this..."></textarea></div>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="share-card">
+        <div class="share-label">Today's reminder worth saving</div>
+        <div class="share-quote">"I am still needed. I just get to decide when and how now."</div>
+        <div class="share-byline">The Second Bloom &middot; Susan</div>
+        <button class="share-btn" onclick="shareQuote(this)">&#128203; Copy quote</button>
+      </div>
+
+      <div class="reminder-box">You actually get to decide how you want to show up for the world now. No more fixing two dinners. No more negotiating over the remote. This chapter is yours to design.</div>
+
+      <div class="reflection-summary">
+        <div class="reflection-summary-label">Day 4 Reflection</div>
+        <div class="reflection-summary-text">Tonight you spotted the "needed" pattern and chose how to contribute on your own terms. That is a real shift. Tomorrow we work on staying close without the anxiety.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ DAY 5: THE CLOSENESS RESET ═══ -->
+  <div id="page-day5" class="page" data-day="5">
+    <div class="day-hero terra">
+      <div class="container">
+        <div class="day-eyebrow">Day 5 of 7</div>
+        <h2 class="day-title">The Closeness Reset</h2>
+        <p class="day-subtitle">Connected, Without the Anxiety</p>
+        <div class="goal-box">Tonight's goal: Stay warmly connected to your kids without using texting to fill the quiet.</div>
+        <p class="grace-note">If you missed yesterday, just start here. There is no catching up to do.</p>
+      </div>
+    </div>
+    <div class="day-content container">
+
+      <!-- Step 1 -->
+      <div class="step-block">
+        <button class="step-trigger">
+          <div class="step-circle terra">1</div>
+          <div class="step-title-wrap"><div class="step-title">Pause</div><div class="step-mins">1 min</div></div>
+          <span class="step-check-icon">&#10003;</span>
+          <span class="step-chevron">&#9662;</span>
+        </button>
+        <div class="step-body"><div class="step-body-inner">
+          <div class="quote-block">"Connection is still here, even in the space."</div>
+        </div></div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step-block">
+        <button class="step-trigger">
+          <div class="step-circle terra">2</div>
+          <div class="step-title-wrap"><div class="step-title">Name What You're Needing</div><div class="step-mins">1 min</div></div>
+          <span class="step-check-icon">&#10003;</span>
+          <span class="step-chevron">&#9662;</span>
+        </button>
+        <div class="step-body"><div class="step-body-inner">
+          <div class="field-group"><label class="field-label">"Right now, I'm needing closeness because..."</label><textarea class="short" data-field="d5-need-why" placeholder="No wrong answers here..."></textarea></div>
+        </div></div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="step-block">
+        <button class="step-trigger">
+          <div class="step-circle terra">3</div>
+          <div class="step-title-wrap"><div class="step-title">Two Kinds of Closeness</div><div class="step-mins">2 min</div></div>
+          <span class="step-check-icon">&#10003;</span>
+          <span class="step-chevron">&#9662;</span>
+        </button>
+        <div class="step-body"><div class="step-body-inner">
+          <p>Which one is true tonight?</p>
+          <div class="checkbox-grid">
+            <label class="check-item"><input type="checkbox" data-field="d5-closeness-comfort"><span>Comfort, I need relief right now</span></label>
+            <label class="check-item"><input type="checkbox" data-field="d5-closeness-true"><span>True closeness, I want to share love</span></label>
+            <label class="check-item"><input type="checkbox" data-field="d5-closeness-both"><span>Both</span></label>
+          </div>
+        </div></div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="step-block">
+        <button class="step-trigger">
+          <div class="step-circle terra">4</div>
+          <div class="step-title-wrap"><div class="step-title">Self-Connection Minute</div><div class="step-mins">3 min</div></div>
+          <span class="step-check-icon">&#10003;</span>
+          <span class="step-chevron">&#9662;</span>
+        </button>
+        <div class="step-body"><div class="step-body-inner">
+          <div class="field-group"><label class="field-label">What I wish I could hear right now is:</label><textarea class="short" data-field="d5-wish" placeholder="Whatever comes up is perfect..."></textarea></div>
+          <div class="field-group"><label class="field-label">What I need you to know is:</label><textarea class="short" data-field="d5-know" placeholder="Whatever comes up is perfect..."></textarea></div>
+        </div></div>
+      </div>
+
+      <!-- Step 5 -->
+      <div class="step-block">
+        <button class="step-trigger">
+          <div class="step-circle terra">5</div>
+          <div class="step-title-wrap"><div class="step-title">Choose One</div><div class="step-mins">2 min</div></div>
+          <span class="step-check-icon">&#10003;</span>
+          <span class="step-chevron">&#9662;</span>
+        </button>
+        <div class="step-body"><div class="step-body-inner">
+          <div class="checkbox-grid">
+            <label class="check-item"><input type="checkbox" data-field="d5-choose-a"><span>A: Send a warm, low pressure text</span></label>
+            <label class="check-item"><input type="checkbox" data-field="d5-choose-b"><span>B: Set up a time to actually talk this week</span></label>
+            <label class="check-item"><input type="checkbox" data-field="d5-choose-c"><span>C: Do something tonight that fills you up without needing them to respond</span></label>
+          </div>
+          <div class="close-prompt-section" style="margin-top:16px;">
+            <div class="close-prompt-label">Close</div>
+            <div class="field-group"><label class="field-label">"Closeness for me can feel steady when I..."</label><textarea class="short" data-field="d5-close" placeholder="Just one sentence, you've got this..."></textarea></div>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="share-card">
+        <div class="share-label">Today's reminder worth saving</div>
+        <div class="share-quote">"I can feel close to my kids and still have a full life of my own."</div>
+        <div class="share-byline">The Second Bloom &middot; Susan</div>
+        <button class="share-btn" onclick="shareQuote(this)">&#128203; Copy quote</button>
+      </div>
+
+      <div class="reminder-box">You are someone really worth connecting with. And the good news is you now have all the time and energy to invest in the people who actually fill you up. Also you can now make that quick underwear dash to the laundry room without worrying about someone walking out of their room. Nobody is talking about that but it is a real win.</div>
+
+      <div class="reflection-summary">
+        <div class="reflection-summary-label">Day 5 Reflection</div>
+        <div class="reflection-summary-text">Tonight you connected from a calm, steady place. Not from anxiety, but from love. That is the whole goal of this reset. Tomorrow we plan the weekend.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ DAY 6: THE WEEKEND ANCHOR MAP ═══ -->
+  <div id="page-day6" class="page" data-day="6">
+    <div class="day-hero sage">
+      <div class="container">
+        <div class="day-eyebrow">Day 6 of 7</div>
+        <h2 class="day-title">The Weekend Anchor Map</h2>
+        <p class="day-subtitle">Give Your Weekend Just Enough Structure</p>
+        <div class="goal-box">Tonight's goal: Put just enough in place for the weekend so you feel like you have something to look forward to and lean on.</div>
+        <p class="grace-note">If you missed yesterday, just start here. There is no catching up to do.</p>
+      </div>
+    </div>
+    <div class="day-content container">
+
+      <!-- Step 1 -->
+      <div class="step-block">
+        <button class="step-trigger">
+          <div class="step-circle sage">1</div>
+          <div class="step-title-wrap"><div class="step-title">Pause</div><div class="step-mins">1 min</div></div>
+          <span class="step-check-icon">&#10003;</span>
+          <span class="step-chevron">&#9662;</span>
+        </button>
+        <div class="step-body"><div class="step-body-inner">
+          <div class="quote-block">"I don't need a perfect weekend. I need a supported weekend."</div>
+        </div></div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step-block">
+        <button class="step-trigger">
+          <div class="step-circle sage">2</div>
+          <div class="step-title-wrap"><div class="step-title">Your Hardest Moment</div><div class="step-mins">2 min</div></div>
+          <span class="step-check-icon">&#10003;</span>
+          <span class="step-chevron">&#9662;</span>
+        </button>
+        <div class="step-body"><div class="step-body-inner">
+          <div class="field-group"><label class="field-label">My hardest weekend moment is usually:</label><textarea class="short" data-field="d6-hardest" placeholder="Be specific, Saturday morning? Sunday evening?"></textarea></div>
+        </div></div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="step-block">
+        <button class="step-trigger">
+          <div class="step-circle sage">3</div>
+          <div class="step-title-wrap"><div class="step-title">Choose Your Weekend Anchors</div><div class="step-mins">6 min</div></div>
+          <span class="step-check-icon">&#10003;</span>
+          <span class="step-chevron">&#9662;</span>
+        </button>
+        <div class="step-body"><div class="step-body-inner">
+          <p>Choose one from each:</p>
+          <div class="anchor-block">
+            <div class="anchor-title">Anchor 1: Connection</div>
+            <div class="field-group"><label class="field-label">What:</label><textarea class="short" data-field="d6-anchor1-what" placeholder="What will you do?"></textarea></div>
+            <div class="inline-fields">
+              <div class="field-group"><label class="field-label">When:</label><input type="text" data-field="d6-anchor1-when" placeholder="Day / time"></div>
+              <div class="field-group"><label class="field-label">Who:</label><input type="text" data-field="d6-anchor1-who" placeholder="With who?"></div>
+            </div>
+          </div>
+          <div class="anchor-block">
+            <div class="anchor-title">Anchor 2: Me Block</div>
+            <div class="field-group"><label class="field-label">What:</label><textarea class="short" data-field="d6-anchor2-what" placeholder="Something just for you..."></textarea></div>
+            <div class="inline-fields">
+              <div class="field-group"><label class="field-label">When:</label><input type="text" data-field="d6-anchor2-when" placeholder="Day / time"></div>
+              <div class="field-group"><label class="field-label">How long:</label><input type="text" data-field="d6-anchor2-howlong" placeholder="e.g. 30 min"></div>
+            </div>
+          </div>
+          <div class="anchor-block">
+            <div class="anchor-title">Anchor 3: Chosen Contribution</div>
+            <div class="field-group"><label class="field-label">What:</label><textarea class="short" data-field="d6-anchor3-what" placeholder="Something you choose to do for someone else..."></textarea></div>
+            <div class="field-group"><label class="field-label">When:</label><input type="text" data-field="d6-anchor3-when" placeholder="Day / time"></div>
+          </div>
+          <div class="anchor-block">
+            <div class="anchor-title">Anchor 4: Comfort Ritual</div>
+            <div class="field-group"><label class="field-label">What:</label><textarea class="short" data-field="d6-anchor4-what" placeholder="Something cozy and calming..."></textarea></div>
+            <div class="field-group"><label class="field-label">When:</label><input type="text" data-field="d6-anchor4-when" placeholder="Day / time"></div>
+          </div>
+          <div class="quote-block">"When I feel the urge to check in just to feel better this weekend, I will do one anchor first. Then I will decide."</div>
+          <div class="close-prompt-section" style="margin-top:16px;">
+            <div class="close-prompt-label">Close</div>
+            <div class="field-group"><label class="field-label">"This weekend, I'm allowed to feel supported by..."</label><textarea class="short" data-field="d6-close" placeholder="Just one sentence, you've got this..."></textarea></div>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="share-card">
+        <div class="share-label">Today's reminder worth saving</div>
+        <div class="share-quote">"A supported weekend starts with one simple thing to look forward to."</div>
+        <div class="share-byline">The Second Bloom &middot; Susan</div>
+        <button class="share-btn" onclick="shareQuote(this)">&#128203; Copy quote</button>
+      </div>
+
+      <div class="reminder-box">A good weekend does not have to be perfect. It just needs one good thing to look forward to. Start it Saturday morning with YOUR music playing in the kitchen, not whatever your kids had going on, and zero requests to clean any room. That part is already handled.</div>
+
+      <div class="reflection-summary">
+        <div class="reflection-summary-label">Day 6 Reflection</div>
+        <div class="reflection-summary-text">Your weekend has anchors now. Structure without rigidity. Freedom without emptiness. Tomorrow is the final day, where we build your ongoing rhythm and your plan for when the loop comes back.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ DAY 7: WEEKLY RHYTHM + BACKSLIDE PLAN ═══ -->
+  <div id="page-day7" class="page" data-day="7">
+    <div class="day-hero terra">
+      <div class="container">
+        <div class="day-eyebrow">Day 7 of 7</div>
+        <h2 class="day-title">Weekly Rhythm + Backslide Plan</h2>
+        <p class="day-subtitle">Building Your New Normal</p>
+        <div class="goal-box">Tonight's goal: Create a simple rhythm you can carry into next week, and have a real plan ready for when the loop comes back, because it will, and that is okay.</div>
+        <p class="grace-note">If you missed yesterday, just start here. There is no catching up to do.</p>
+      </div>
+    </div>
+    <div class="day-content container">
+
+      <!-- Step 1 -->
+      <div class="step-block">
+        <button class="step-trigger">
+          <div class="step-circle terra">1</div>
+          <div class="step-title-wrap"><div class="step-title">Pause</div><div class="step-mins">1 min</div></div>
+          <span class="step-check-icon">&#10003;</span>
+          <span class="step-chevron">&#9662;</span>
+        </button>
+        <div class="step-body"><div class="step-body-inner">
+          <div class="quote-block">"I'm building a new normal. It gets to be simple."</div>
+          <div class="framework-map">
+            <div class="framework-list">
+              <div class="framework-item"><div class="framework-day">Day 1</div><div class="framework-title">The Trigger Map</div><div class="framework-check" aria-label="Completed">&#10003;</div></div>
+              <div class="framework-item"><div class="framework-day">Day 2</div><div class="framework-title">The Reassurance Reset</div><div class="framework-check" aria-label="Completed">&#10003;</div></div>
+              <div class="framework-item"><div class="framework-day">Day 3</div><div class="framework-title">The Belonging Reset</div><div class="framework-check" aria-label="Completed">&#10003;</div></div>
+              <div class="framework-item"><div class="framework-day">Day 4</div><div class="framework-title">The Needed Reset</div><div class="framework-check" aria-label="Completed">&#10003;</div></div>
+              <div class="framework-item"><div class="framework-day">Day 5</div><div class="framework-title">The Closeness Reset</div><div class="framework-check" aria-label="Completed">&#10003;</div></div>
+              <div class="framework-item"><div class="framework-day">Day 6</div><div class="framework-title">The Weekend Anchor Map</div><div class="framework-check" aria-label="Completed">&#10003;</div></div>
+              <div class="framework-item"><div class="framework-day">Day 7</div><div class="framework-title">Weekly Rhythm + Backslide Plan</div><div class="framework-check" aria-label="Completed">&#10003;</div></div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step-block">
+        <button class="step-trigger">
+          <div class="step-circle terra">2</div>
+          <div class="step-title-wrap"><div class="step-title">Choose Your 3 Weekly Anchors</div><div class="step-mins">3 min</div></div>
+          <span class="step-check-icon">&#10003;</span>
+          <span class="step-chevron">&#9662;</span>
+        </button>
+        <div class="step-body"><div class="step-body-inner">
+          <div class="field-group"><label class="field-label">Anchor #1 (Identity): What + day/time:</label><input type="text" data-field="d7-anchor1" placeholder="e.g. Tuesday yoga at 7pm"></div>
+          <div class="field-group"><label class="field-label">Anchor #2 (Connection): Who/what + day/time:</label><input type="text" data-field="d7-anchor2" placeholder="e.g. Coffee with Sarah on Saturday"></div>
+          <div class="field-group"><label class="field-label">Anchor #3 (Purpose): What + day/time:</label><input type="text" data-field="d7-anchor3" placeholder="e.g. Volunteer Wednesday afternoon"></div>
+        </div></div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="step-block">
+        <button class="step-trigger">
+          <div class="step-circle terra">3</div>
+          <div class="step-title-wrap"><div class="step-title">Your Evening Protocol</div><div class="step-mins">2 min</div></div>
+          <span class="step-check-icon">&#10003;</span>
+          <span class="step-chevron">&#9662;</span>
+        </button>
+        <div class="step-body"><div class="step-body-inner">
+          <div class="quote-block">"In the evenings, when I feel that pull, I will pause first, name what I am actually needing, do my 10 minute reset, and then choose how I want to connect from a calm place."</div>
+          <div class="field-group"><label class="field-label">My reminder phrase (something short you'll actually remember):</label><input type="text" data-field="d7-reminder" placeholder="e.g. 'Pause first, then decide'"></div>
+        </div></div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="step-block">
+        <button class="step-trigger">
+          <div class="step-circle terra">4</div>
+          <div class="step-title-wrap"><div class="step-title">Backslide Plan</div><div class="step-mins">3 min</div></div>
+          <span class="step-check-icon">&#10003;</span>
+          <span class="step-chevron">&#9662;</span>
+        </button>
+        <div class="step-body"><div class="step-body-inner">
+          <div class="field-group"><label class="field-label">My top trigger is:</label><input type="text" data-field="d7-trigger" placeholder="What sets off the loop for you?"></div>
+          <p>It usually happens:</p>
+          <div class="checkbox-grid two-col">
+            <label class="check-item"><input type="checkbox" data-field="d7-when-evenings"><span>Evenings</span></label>
+            <label class="check-item"><input type="checkbox" data-field="d7-when-weekends"><span>Weekends</span></label>
+            <label class="check-item"><input type="checkbox" data-field="d7-when-bedtime"><span>Bedtime</span></label>
+            <label class="check-item"><input type="checkbox" data-field="d7-when-other"><span>Other</span></label>
+          </div>
+          <div class="field-group"><label class="field-label">My 2-minute emergency reset action is:</label><textarea class="short" data-field="d7-emergency" placeholder="What will you do when the loop comes back?"></textarea></div>
+        </div></div>
+      </div>
+
+      <!-- Step 5 -->
+      <div class="step-block">
+        <button class="step-trigger">
+          <div class="step-circle terra">5</div>
+          <div class="step-title-wrap"><div class="step-title">A Text That Feels Good to Send (Optional)</div><div class="step-mins">1 min</div></div>
+          <span class="step-check-icon">&#10003;</span>
+          <span class="step-chevron">&#9662;</span>
+        </button>
+        <div class="step-body"><div class="step-body-inner">
+          <p>If you want to have a go-to text ready for when you do reach out to your kids, write it here. Something warm and low pressure that you feel good about:</p>
+          <div class="field-group"><label class="field-label">My go-to text to my kids:</label><textarea class="short" data-field="d7-goto-text" placeholder="Write a text you feel good about sending, no pressure on them..."></textarea></div>
+          <div class="close-prompt-section" style="margin-top:16px;">
+            <div class="close-prompt-label">Your Next Chapter Sentence</div>
+            <div class="field-group"><label class="field-label">"This week, my next chapter starts with..."</label><textarea class="short" data-field="d7-close" placeholder="Just one sentence, you've got this..."></textarea></div>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="share-card">
+        <div class="share-label">Today's reminder worth saving</div>
+        <div class="share-quote">"Letting go is not the end. It is the beginning of my second bloom."</div>
+        <div class="share-byline">The Second Bloom &middot; Susan</div>
+        <button class="share-btn" onclick="shareQuote(this)">&#128203; Copy quote</button>
+      </div>
+
+      <div class="reminder-box">After 7 days, you know what a mindset shift feels like now. Keep showing up for yourself every evening. Keep doing the work. It gets easier every time you practice it.</div>
+
+      <div class="reflection-summary">
+        <div class="reflection-summary-label">Day 7 Reflection</div>
+        <div class="reflection-summary-text">You showed up for yourself every single night this week. You mapped your triggers, named your needs, built a framework, and created a backslide plan. This is not the end. It is the beginning of your second bloom.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ FINAL PAGE ═══ -->
+  <div id="page-final" class="page">
+    <div class="final-page">
+      <h1>You did it.</h1>
+      <p>Seven days. Ten minutes a night.</p>
+      <p>Look at you.</p>
+      <p style="font-style:normal; opacity:0.6;">The counters are clean. The bathroom is yours. And so is this next chapter.</p>
+      <div class="final-divider"></div>
+
+      <!-- Before/After Comparison Card -->
+      <div class="comparison-card">
+        <div class="comparison-header"><h3>Your Urge Scale: Before and After</h3></div>
+        <div class="comparison-body">
+          <div class="comparison-col">
+            <div class="comparison-col-label">Day 1</div>
+            <div class="comparison-col-value before" id="beforeScore">5</div>
+            <div class="comparison-col-state" id="beforeState">Pulled</div>
+          </div>
+          <div class="comparison-col">
+            <div class="comparison-col-label">Day 7</div>
+            <div class="comparison-col-value after" id="afterScore">--</div>
+            <div class="comparison-col-state" id="afterState">Rate below</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Final Urge Slider -->
+      <div class="urge-scale-section" style="padding:24px 0; max-width:440px;">
+        <p style="font-size:14px; color:var(--brown); margin-bottom:16px; font-family:'DM Sans',sans-serif; font-style:normal;">Where are you now? Slide to rate your urge today:</p>
+        <div class="urge-slider-wrap">
+          <input type="range" class="urge-slider" id="afterScoreSlider" data-field="final-urge" min="1" max="10" value="5" aria-label="Final texting urge scale" oninput="document.getElementById('afterScore').textContent=this.value; var states=[{min:1,max:1,l:'Completely calm'},{min:2,max:3,l:'Steady'},{min:4,max:5,l:'Pulled'},{min:6,max:7,l:'Spiraling'},{min:8,max:9,l:'Phone in hand'},{min:10,max:10,l:'Full spiral'}]; var v=parseInt(this.value); for(var i=0;i<states.length;i++){if(v>=states[i].min&&v<=states[i].max){document.getElementById('afterState').textContent=states[i].l;break;}}">
+          <div class="urge-labels"><span>1 Calm</span><span>10 Full spiral</span></div>
+        </div>
+      </div>
+
+      <!-- Summary Section -->
+      <div class="summary-section">
+        <h3 style="font-family:'DM Serif Display',serif; font-size:20px; font-weight:400; color:var(--near-black); margin-bottom:16px; text-align:center;">Your Week at a Glance</h3>
+        <div id="finalSummary">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <div class="final-divider"></div>
+
+      <!-- Letter to Future Self -->
+      <div style="max-width:440px; width:100%; margin:0 auto; text-align:left;">
+        <h3 style="font-family:'DM Serif Display',serif; font-size:18px; font-weight:400; color:var(--near-black); margin-bottom:8px;">A Letter to Your Future Self</h3>
+        <p style="font-size:14px; color:var(--brown); line-height:1.6; margin-bottom:12px; font-family:'DM Sans',sans-serif; font-style:normal;">Write a few words to the version of you who might need this reminder on a hard night. What do you want her to know?</p>
+        <textarea class="tall" data-field="final-letter" placeholder="Dear future me..." style="width:100%;"></textarea>
+      </div>
+
+      <div class="final-divider"></div>
+
+      <p>Letting go does not mean you love them any less. It means you are finally free to show up for yourself too.</p>
+      <p>Your next chapter is waiting for you. And it is going to be better than you think.</p>
+
+      <!-- Action Buttons -->
+      <div class="final-actions">
+        <button class="btn-outline" onclick="printSummary()">&#128424; Print My Summary</button>
+        <button class="btn-primary" onclick="showPage('welcome')">Start Again &#x21BA;</button>
+      </div>
+
+      <!-- Cross-sell CTA -->
+      <div style="max-width:440px; width:100%; margin:32px auto 0; padding:24px; background:var(--terra-pale); border:1px solid var(--terra-light); border-radius:12px; text-align:center;">
+        <p style="font-family:'DM Serif Display',serif; font-size:18px; color:var(--near-black); margin-bottom:8px; font-style:normal;">Ready for your next chapter?</p>
+        <p style="font-size:14px; color:var(--brown); line-height:1.6; margin-bottom:16px; font-family:'DM Sans',sans-serif; font-style:normal;">The Second Bloom community has more resources, guided workshops, and weekly prompts for empty nest mothers building their new normal.</p>
+        <a href="[PLACEHOLDER: Second Bloom URL]" style="display:inline-block; background:var(--terra); color:var(--white); text-decoration:none; padding:12px 28px; border-radius:8px; font-family:'DM Sans',sans-serif; font-size:14px; font-weight:500;">Explore The Second Bloom</a>
+      </div>
+
+      <div class="final-brand">Susan &middot; The Second Bloom</div>
+      <div class="final-disclaimer">This workbook is educational content only. It is not therapy, medical advice, or a substitute for professional support. If you are in crisis, please contact a licensed professional.</div>
+    </div>
+  </div>
+
+  <!-- ═══ CELEBRATION OVERLAY ═══ -->
+  <div id="celebrationOverlay" class="celebration-overlay" role="dialog" aria-modal="true" aria-label="Day completion celebration">
+    <div class="celebration-badge" aria-hidden="true">&#10003;</div>
+    <div class="celebration-day" id="celebrationDay"></div>
+    <div class="celebration-title" id="celebrationTitle"></div>
+    <div class="celebration-sub" id="celebrationSub"></div>
+    <button class="celebration-next-btn" id="celebrationNextBtn">Continue to Next Day &rarr;</button>
+    <button class="celebration-skip" onclick="dismissCelebration()">Skip for now</button>
+  </div>
+
+  <!-- ═══ BOTTOM NAV ═══ -->
+  <div class="bottom-nav" aria-label="Day navigation">
+    <div class="day-dots" role="tablist" aria-label="Jump to day">
+      <button class="day-dot" role="tab" onclick="goToDay(1)" aria-label="Day 1" title="Day 1"></button>
+      <button class="day-dot" role="tab" onclick="goToDay(2)" aria-label="Day 2" title="Day 2"></button>
+      <button class="day-dot" role="tab" onclick="goToDay(3)" aria-label="Day 3" title="Day 3"></button>
+      <button class="day-dot" role="tab" onclick="goToDay(4)" aria-label="Day 4" title="Day 4"></button>
+      <button class="day-dot" role="tab" onclick="goToDay(5)" aria-label="Day 5" title="Day 5"></button>
+      <button class="day-dot" role="tab" onclick="goToDay(6)" aria-label="Day 6" title="Day 6"></button>
+      <button class="day-dot" role="tab" onclick="goToDay(7)" aria-label="Day 7" title="Day 7"></button>
+    </div>
+    <button class="print-btn" onclick="window.print()" aria-label="Print this page">Print</button>
+  </div>
+
+</div>
+
+<!-- ═══ SAVE INDICATOR ═══ -->
+<div class="save-indicator" id="saveIndicator" aria-live="polite">&#10003; Saved</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>The Urge-to-Text SOS Card Deck | The Second Bloom</title>
+<meta name="description" content="10 phone-ready SOS cards for the moment your hand reaches for the phone. Quick, gentle interventions when the texting urge hits. By Susan, The Second Bloom.">
+<meta property="og:title" content="The Urge-to-Text SOS Card Deck">
+<meta property="og:description" content="10 phone-ready cards for the moment your hand reaches for the phone.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<!-- [PLACEHOLDER: Add og:image and og:url once hosted] -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<!-- ═══ TOP BAR ═══ -->
+<div class="topbar">
+  <div class="topbar-brand">The Second Bloom</div>
+  <div class="topbar-subtitle">SOS Card Deck</div>
+  <div class="topbar-count" id="cardCounter">1 / 10</div>
+</div>
+
+<!-- ═══ DISCLAIMER ═══ -->
+<div class="disclaimer-bar">This product is educational content only. It is not therapy, medical advice, or a substitute for professional support.</div>
+
+<!-- ═══ URGE SELECTOR ═══ -->
+<div class="urge-selector" id="main-content">
+  <div class="urge-selector-label">Which urge are you feeling?</div>
+  <div class="urge-selector-text">Tap the one that matches right now</div>
+  <div class="urge-pills" role="radiogroup" aria-label="Select your urge type">
+    <button class="urge-pill" role="radio" aria-checked="false" data-urge="check-in" onclick="selectUrge(this)">Just checking in</button>
+    <button class="urge-pill" role="radio" aria-checked="false" data-urge="worry" onclick="selectUrge(this)">Worried</button>
+    <button class="urge-pill" role="radio" aria-checked="false" data-urge="lonely" onclick="selectUrge(this)">Lonely</button>
+    <button class="urge-pill" role="radio" aria-checked="false" data-urge="needed" onclick="selectUrge(this)">Need to be needed</button>
+    <button class="urge-pill" role="radio" aria-checked="false" data-urge="guilt" onclick="selectUrge(this)">Guilty</button>
+  </div>
+</div>
+
+<!-- ═══ TAGLINE ═══ -->
+<div class="tagline-bar">
+  <div class="tagline-text">For the moment your hand reaches for the phone.</div>
+</div>
+
+<!-- ═══ MAIN STAGE ═══ -->
+<div class="stage" role="main" aria-label="SOS Card Viewer">
+
+  <!-- ═══ PHONE SHELL ═══ -->
+  <div class="phone-shell" aria-label="Phone preview showing SOS cards">
+    <div class="phone-inner">
+
+      <!-- ══ CARD 1 ══ -->
+      <div id="card-1" class="wallpaper style-cream active" data-urge-type="check-in" aria-label="Card 1 of 10">
+        <div class="status-bar"><span>9:41</span><span>SOS Deck</span></div>
+        <div class="card-body">
+          <div class="card-top">
+            <div class="card-eyebrow">SOS Card</div>
+            <div class="card-divider-top"></div>
+            <div class="card-urge-label">The urge</div>
+            <div class="card-urge">"I should just check in."</div>
+          </div>
+          <div class="card-mid">
+            <div class="card-action-label">Do this instead</div>
+            <div class="card-action">Set a timer for 10 minutes. If you still want to text when it goes off, send something warm and low pressure. Most of the time, the urge will pass on its own.</div>
+            <div class="card-context">The word "should" is a signal. It means the urge is coming from habit, not from a genuine desire to connect. Habits can be redirected.</div>
+          </div>
+          <div class="card-bottom">
+            <div class="card-divider"></div>
+            <div class="card-humor">The good news: you now have 10 minutes to eat whatever you want without anyone asking "what's for dinner."</div>
+            <div class="card-brand-row"><span class="card-brand">Susan, The Second Bloom</span><span class="card-num">1/10</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ CARD 2 ══ -->
+      <div id="card-2" class="wallpaper style-terra" data-urge-type="worry" aria-label="Card 2 of 10">
+        <div class="status-bar"><span>9:41</span><span>SOS Deck</span></div>
+        <div class="card-body">
+          <div class="card-top">
+            <div class="card-eyebrow">SOS Card</div>
+            <div class="card-divider-top"></div>
+            <div class="card-urge-label">The urge</div>
+            <div class="card-urge">"What if something happened?"</div>
+          </div>
+          <div class="card-mid">
+            <div class="card-action-label">Do this instead</div>
+            <div class="card-action">Ask yourself: Is there any actual evidence something is wrong? If no, this is your brain running a worry loop. Place your hand on your chest and say: "They are okay. I am okay."</div>
+            <div class="card-context">The worry loop is your nervous system scanning for threats that are not there. It is a leftover pattern from years of being responsible for their safety.</div>
+          </div>
+          <div class="card-bottom">
+            <div class="card-divider"></div>
+            <div class="card-humor">They survived your cooking. They survived learning to drive. They are handling it.</div>
+            <div class="card-brand-row"><span class="card-brand">Susan, The Second Bloom</span><span class="card-num">2/10</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ CARD 3 ══ -->
+      <div id="card-3" class="wallpaper style-sage" data-urge-type="lonely" aria-label="Card 3 of 10">
+        <div class="status-bar"><span>9:41</span><span>SOS Deck</span></div>
+        <div class="card-body">
+          <div class="card-top">
+            <div class="card-eyebrow">SOS Card</div>
+            <div class="card-divider-top"></div>
+            <div class="card-urge-label">The urge</div>
+            <div class="card-urge">"The house is too quiet."</div>
+          </div>
+          <div class="card-mid">
+            <div class="card-action-label">Do this instead</div>
+            <div class="card-action">Put on your favorite music or a podcast. Walk to a different room. The quiet is not the enemy, but you can change the landscape while you adjust to it.</div>
+            <div class="card-context">Silence after years of noise creates a sensory gap. Your brain interprets the gap as something wrong. It is not. It is just unfamiliar.</div>
+          </div>
+          <div class="card-bottom">
+            <div class="card-divider"></div>
+            <div class="card-humor">You can finally listen to your music at full volume. Nobody is going to come out of their room and say "Mom, seriously?"</div>
+            <div class="card-brand-row"><span class="card-brand">Susan, The Second Bloom</span><span class="card-num">3/10</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ CARD 4 ══ -->
+      <div id="card-4" class="wallpaper style-warm" data-urge-type="check-in" aria-label="Card 4 of 10">
+        <div class="status-bar"><span>9:41</span><span>SOS Deck</span></div>
+        <div class="card-body">
+          <div class="card-top">
+            <div class="card-eyebrow">SOS Card</div>
+            <div class="card-divider-top"></div>
+            <div class="card-urge-label">The urge</div>
+            <div class="card-urge">"I just want to hear their voice."</div>
+          </div>
+          <div class="card-mid">
+            <div class="card-action-label">Do this instead</div>
+            <div class="card-action">Write down what you would say to them. Then read it back. If it still feels like something you want to send from a calm place, schedule a call for tomorrow.</div>
+            <div class="card-context">The urge to hear their voice often spikes at night when your defenses are down. Writing it first helps you separate connection from comfort-seeking.</div>
+          </div>
+          <div class="card-bottom">
+            <div class="card-divider"></div>
+            <div class="card-humor">Bonus: they are more likely to pick up when it is not the third call today.</div>
+            <div class="card-brand-row"><span class="card-brand">Susan, The Second Bloom</span><span class="card-num">4/10</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ CARD 5 ══ -->
+      <div id="card-5" class="wallpaper style-cream" data-urge-type="needed" aria-label="Card 5 of 10">
+        <div class="status-bar"><span>9:41</span><span>SOS Deck</span></div>
+        <div class="card-body">
+          <div class="card-top">
+            <div class="card-eyebrow">SOS Card</div>
+            <div class="card-divider-top"></div>
+            <div class="card-urge-label">The urge</div>
+            <div class="card-urge">"They don't need me anymore."</div>
+          </div>
+          <div class="card-mid">
+            <div class="card-action-label">Do this instead</div>
+            <div class="card-action">Write down one way someone needed you today that was not your child. A friend, a coworker, a neighbor. You are still needed. The audience just changed.</div>
+            <div class="card-context">Your identity as "the needed one" was built over decades. It does not disappear when they leave. It shifts. This is about relearning where your value lives.</div>
+          </div>
+          <div class="card-bottom">
+            <div class="card-divider"></div>
+            <div class="card-humor">Also nobody needs you to pack their lunch at 6am anymore. That part is an actual gift.</div>
+            <div class="card-brand-row"><span class="card-brand">Susan, The Second Bloom</span><span class="card-num">5/10</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ CARD 6 ══ -->
+      <div id="card-6" class="wallpaper style-terra" data-urge-type="guilt" aria-label="Card 6 of 10">
+        <div class="status-bar"><span>9:41</span><span>SOS Deck</span></div>
+        <div class="card-body">
+          <div class="card-top">
+            <div class="card-eyebrow">SOS Card</div>
+            <div class="card-divider-top"></div>
+            <div class="card-urge-label">The urge</div>
+            <div class="card-urge">"I feel guilty for enjoying this."</div>
+          </div>
+          <div class="card-mid">
+            <div class="card-action-label">Do this instead</div>
+            <div class="card-action">Say this out loud: "I am allowed to enjoy my life. It does not mean I love them less." Then do the thing you were about to feel guilty about, and do it fully.</div>
+            <div class="card-context">Guilt and freedom often arrive at the same time in this season. Feeling relieved does not mean you are a bad mother. It means you are human.</div>
+          </div>
+          <div class="card-bottom">
+            <div class="card-divider"></div>
+            <div class="card-humor">You earned the right to eat cereal for dinner and call it a life choice, not a failure.</div>
+            <div class="card-brand-row"><span class="card-brand">Susan, The Second Bloom</span><span class="card-num">6/10</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ CARD 7 ══ -->
+      <div id="card-7" class="wallpaper style-sage" data-urge-type="worry" aria-label="Card 7 of 10">
+        <div class="status-bar"><span>9:41</span><span>SOS Deck</span></div>
+        <div class="card-body">
+          <div class="card-top">
+            <div class="card-eyebrow">SOS Card</div>
+            <div class="card-divider-top"></div>
+            <div class="card-urge-label">The urge</div>
+            <div class="card-urge">"They haven't texted back."</div>
+          </div>
+          <div class="card-mid">
+            <div class="card-action-label">Do this instead</div>
+            <div class="card-action">Put your phone in a different room for 30 minutes. Do one thing with your hands: cook, clean, garden, draw. When you come back, check once. Then move on.</div>
+            <div class="card-context">Waiting for a reply activates the same brain circuitry as anticipating a reward. The longer you wait, the more urgent it feels. Breaking the physical proximity to the phone breaks the loop.</div>
+          </div>
+          <div class="card-bottom">
+            <div class="card-divider"></div>
+            <div class="card-humor">They are not ignoring you. They are probably watching a video of a cat doing something ridiculous. Their priorities are different now.</div>
+            <div class="card-brand-row"><span class="card-brand">Susan, The Second Bloom</span><span class="card-num">7/10</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ CARD 8 ══ -->
+      <div id="card-8" class="wallpaper style-warm" data-urge-type="lonely" aria-label="Card 8 of 10">
+        <div class="status-bar"><span>9:41</span><span>SOS Deck</span></div>
+        <div class="card-body">
+          <div class="card-top">
+            <div class="card-eyebrow">SOS Card</div>
+            <div class="card-divider-top"></div>
+            <div class="card-urge-label">The urge</div>
+            <div class="card-urge">"Nobody understands this."</div>
+          </div>
+          <div class="card-mid">
+            <div class="card-action-label">Do this instead</div>
+            <div class="card-action">Text one adult friend instead. You do not have to explain the whole thing. Just say: "Having a quiet night, wanted to say hi." That is enough.</div>
+            <div class="card-context">Loneliness tricks you into believing you are the only one. You are not. Millions of mothers are sitting in quiet houses right now, reaching for their phones for the same reason.</div>
+          </div>
+          <div class="card-bottom">
+            <div class="card-divider"></div>
+            <div class="card-humor">You are not alone. You are just finally alone in your own bathroom, which honestly, congratulations.</div>
+            <div class="card-brand-row"><span class="card-brand">Susan, The Second Bloom</span><span class="card-num">8/10</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ CARD 9 ══ -->
+      <div id="card-9" class="wallpaper style-cream" data-urge-type="needed" aria-label="Card 9 of 10">
+        <div class="status-bar"><span>9:41</span><span>SOS Deck</span></div>
+        <div class="card-body">
+          <div class="card-top">
+            <div class="card-eyebrow">SOS Card</div>
+            <div class="card-divider-top"></div>
+            <div class="card-urge-label">The urge</div>
+            <div class="card-urge">"I should have done more."</div>
+          </div>
+          <div class="card-mid">
+            <div class="card-action-label">Do this instead</div>
+            <div class="card-action">Write down 3 things you did well as a parent. Not big things. Small ones. The lunches you packed. The drives you made. The times you showed up when it was hard. You did enough.</div>
+            <div class="card-context">Regret is a normal part of transition. Your brain reviews the past when the present feels uncertain. But regret is not truth. It is a feeling looking for evidence.</div>
+          </div>
+          <div class="card-bottom">
+            <div class="card-divider"></div>
+            <div class="card-humor">You kept them alive, fed, and mostly on time. That deserves a trophy, or at least an uninterrupted bath.</div>
+            <div class="card-brand-row"><span class="card-brand">Susan, The Second Bloom</span><span class="card-num">9/10</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ CARD 10 ══ -->
+      <div id="card-10" class="wallpaper style-terra" data-urge-type="guilt" aria-label="Card 10 of 10">
+        <div class="status-bar"><span>9:41</span><span>SOS Deck</span></div>
+        <div class="card-body">
+          <div class="card-top">
+            <div class="card-eyebrow">SOS Card</div>
+            <div class="card-divider-top"></div>
+            <div class="card-urge-label">The urge</div>
+            <div class="card-urge">"Maybe I should just call."</div>
+          </div>
+          <div class="card-mid">
+            <div class="card-action-label">Do this instead</div>
+            <div class="card-action">Write down why you want to call. If the reason is "because I feel anxious," do 5 minutes of deep breathing first. If the reason is "because I love them and have something to share," go ahead and call. The difference matters.</div>
+            <div class="card-context">The impulse to call usually means the anxiety has peaked. Pausing for 5 minutes lets the wave crest and pass. If the desire is still there after the pause, it is real connection, not a loop.</div>
+          </div>
+          <div class="card-bottom">
+            <div class="card-divider"></div>
+            <div class="card-humor">The real test: if you can wait 5 minutes, you are in charge. If you cannot, the loop is. Either way, you are learning.</div>
+            <div class="card-brand-row"><span class="card-brand">Susan, The Second Bloom</span><span class="card-num">10/10</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /phone-inner -->
+  </div><!-- /phone-shell -->
+
+  <!-- ═══ CONTROLS ═══ -->
+  <div class="controls" aria-label="Card navigation">
+    <button class="ctrl-btn" id="prevCardBtn" onclick="prevCard()" aria-label="Previous card" disabled>&larr; Prev</button>
+    <div class="dot-row" role="tablist" aria-label="Jump to card">
+      <button class="dot active" role="tab" onclick="goToCard(1)" aria-label="Card 1" title="Card 1"></button>
+      <button class="dot" role="tab" onclick="goToCard(2)" aria-label="Card 2" title="Card 2"></button>
+      <button class="dot" role="tab" onclick="goToCard(3)" aria-label="Card 3" title="Card 3"></button>
+      <button class="dot" role="tab" onclick="goToCard(4)" aria-label="Card 4" title="Card 4"></button>
+      <button class="dot" role="tab" onclick="goToCard(5)" aria-label="Card 5" title="Card 5"></button>
+      <button class="dot" role="tab" onclick="goToCard(6)" aria-label="Card 6" title="Card 6"></button>
+      <button class="dot" role="tab" onclick="goToCard(7)" aria-label="Card 7" title="Card 7"></button>
+      <button class="dot" role="tab" onclick="goToCard(8)" aria-label="Card 8" title="Card 8"></button>
+      <button class="dot" role="tab" onclick="goToCard(9)" aria-label="Card 9" title="Card 9"></button>
+      <button class="dot" role="tab" onclick="goToCard(10)" aria-label="Card 10" title="Card 10"></button>
+    </div>
+    <button class="ctrl-btn" id="nextCardBtn" onclick="nextCard()" aria-label="Next card">Next &rarr;</button>
+  </div>
+
+  <!-- Save / Share buttons -->
+  <div style="display:flex; gap:8px; justify-content:center; padding:4px 0 8px;">
+    <button class="save-fav-btn" id="saveFavBtn" onclick="toggleFavorite()">&#9825; Save to My Top 3</button>
+    <button class="save-fav-btn" id="shareCardBtn" onclick="shareCard()">&#128203; Copy card</button>
+  </div>
+
+</div><!-- /stage -->
+
+<!-- ═══ URGE TRACKER ═══ -->
+<div class="urge-tracker">
+  <div class="urge-tracker-inner">
+    <button class="tracker-btn" id="trackerBtn" onclick="trackUrge()">I felt this urge</button>
+    <div class="tracker-text">This card: <span class="tracker-count" id="trackerCount">0</span> times &middot; Total: <span class="tracker-count" id="trackerTotal">0</span></div>
+  </div>
+</div>
+
+<!-- ═══ MY TOP 3 CARDS ═══ -->
+<div class="favorites-section">
+  <div class="favorites-box">
+    <div class="favorites-label">My Top 3 Cards</div>
+    <div class="favorites-list" id="favoritesList">
+      <div class="favorites-empty">Tap the heart on any card to save it here.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ CARD TRAY ═══ -->
+<div class="card-tray">
+  <div class="tray-label">All 10 Cards</div>
+  <div class="tray-grid" role="list">
+    <button class="tray-thumb active" role="listitem" onclick="goToCard(1)" aria-label="View Card 1"><div class="tray-inner tc"><span class="tray-num">01</span><div class="tray-lines"><div class="tray-line"></div><div class="tray-line"></div></div></div></button>
+    <button class="tray-thumb" role="listitem" onclick="goToCard(2)" aria-label="View Card 2"><div class="tray-inner tt"><span class="tray-num">02</span><div class="tray-lines"><div class="tray-line"></div><div class="tray-line"></div></div></div></button>
+    <button class="tray-thumb" role="listitem" onclick="goToCard(3)" aria-label="View Card 3"><div class="tray-inner ts"><span class="tray-num">03</span><div class="tray-lines"><div class="tray-line"></div><div class="tray-line"></div></div></div></button>
+    <button class="tray-thumb" role="listitem" onclick="goToCard(4)" aria-label="View Card 4"><div class="tray-inner tw"><span class="tray-num">04</span><div class="tray-lines"><div class="tray-line"></div><div class="tray-line"></div></div></div></button>
+    <button class="tray-thumb" role="listitem" onclick="goToCard(5)" aria-label="View Card 5"><div class="tray-inner tc"><span class="tray-num">05</span><div class="tray-lines"><div class="tray-line"></div><div class="tray-line"></div></div></div></button>
+    <button class="tray-thumb" role="listitem" onclick="goToCard(6)" aria-label="View Card 6"><div class="tray-inner tt"><span class="tray-num">06</span><div class="tray-lines"><div class="tray-line"></div><div class="tray-line"></div></div></div></button>
+    <button class="tray-thumb" role="listitem" onclick="goToCard(7)" aria-label="View Card 7"><div class="tray-inner ts"><span class="tray-num">07</span><div class="tray-lines"><div class="tray-line"></div><div class="tray-line"></div></div></div></button>
+    <button class="tray-thumb" role="listitem" onclick="goToCard(8)" aria-label="View Card 8"><div class="tray-inner tw"><span class="tray-num">08</span><div class="tray-lines"><div class="tray-line"></div><div class="tray-line"></div></div></div></button>
+    <button class="tray-thumb" role="listitem" onclick="goToCard(9)" aria-label="View Card 9"><div class="tray-inner tc"><span class="tray-num">09</span><div class="tray-lines"><div class="tray-line"></div><div class="tray-line"></div></div></div></button>
+    <button class="tray-thumb" role="listitem" onclick="goToCard(10)" aria-label="View Card 10"><div class="tray-inner tt"><span class="tray-num">10</span><div class="tray-lines"><div class="tray-line"></div><div class="tray-line"></div></div></div></button>
+  </div>
+</div>
+
+<!-- ═══ INSTRUCTIONS ═══ -->
+<div class="instructions">
+  <div class="instructions-box">
+    <div class="instructions-title">How to Use These Cards</div>
+    <div class="instructions-text">
+      <strong>In the moment:</strong> When the urge hits, open this deck and swipe to the card that matches what you are feeling. Read the "Do this instead" action and try it before you text.<br><br>
+      <strong>As a wallpaper:</strong> Screenshot your favorite card and set it as your phone wallpaper or lock screen. It will be there the next time you pick up your phone and pause.<br><br>
+      <strong>Track your urges:</strong> Tap "I felt this urge" each time a card matches what you are experiencing. Over time, you will start to see which patterns come up most often.<br><br>
+      <strong>Save your favorites:</strong> Tap the heart icon to save up to 3 cards to your personal "My Top 3" collection for quick access.
+    </div>
+  </div>
+</div>
+
+<!-- ═══ CROSS-SELL ═══ -->
+<div class="cross-sell">
+  <div class="cross-sell-box">
+    <div class="cross-sell-text">Want the full 7-day reset? The Check-In Loop Reset Workbook goes deeper into why the urge happens and gives you a complete evening framework.</div>
+    <a href="[PLACEHOLDER: Product 1 URL]" class="cross-sell-link">See the Workbook</a>
+  </div>
+</div>
+
+<!-- ═══ FOOTER ═══ -->
+<div class="footer">
+  Susan, The Second Bloom<br>
+  This product is educational content only. It is not therapy, medical advice, or a substitute for professional support. If you are in crisis, please contact a licensed professional.<br>
+  &copy; The Second Bloom. All rights reserved.
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
