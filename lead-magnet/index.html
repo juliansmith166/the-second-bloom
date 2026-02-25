@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Quiet Night Reset | The Second Bloom</title>
+<meta name="description" content="A free 10-minute guided exercise for empty nest moms who feel the urge to text their grown kids on quiet nights.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Skip Link -->
+<a href="#main" class="skip-link">Skip to content</a>
+
+<div id="app" role="main" id="main">
+
+  <!-- ==================== COVER ==================== -->
+  <section id="cover" class="page active" role="banner">
+    <div class="page-inner">
+      <div class="cover-eyebrow">Free Guide &middot; 10 Minutes</div>
+      <h1 class="cover-title">The Quiet<br>Night Reset</h1>
+      <div class="cover-divider" aria-hidden="true"></div>
+      <p class="cover-sub">A guided exercise for the next time your hand reaches for the phone on a quiet night.</p>
+      <p class="cover-sub cover-sub-small">For empty nest moms who feel the urge to text their grown kids, and want to know what to do instead.</p>
+      <button class="btn-primary" onclick="goTo('step-1')" aria-label="Start the reset exercise">Start the Reset &rarr;</button>
+      <div class="cover-brand">Susan &nbsp;&middot;&nbsp; The Second Bloom</div>
+      <div class="disclaimer">This guide is educational content only. It is not therapy, medical advice, or a substitute for professional support.</div>
+    </div>
+  </section>
+
+  <!-- ==================== STEP 1: NAME IT ==================== -->
+  <section id="step-1" class="page" aria-label="Step 1: Name what you're feeling">
+    <div class="page-inner">
+      <div class="step-badge">Step 1 of 3</div>
+      <h2 class="step-title">Name It</h2>
+      <p class="step-intro">Before you text, name what you're actually feeling right now.</p>
+
+      <div class="urge-grid" role="radiogroup" aria-label="Select what you are feeling">
+        <button class="urge-btn" data-urge="lonely" role="radio" aria-checked="false">
+          <span class="urge-emoji">&#x1F3E0;</span>
+          <span class="urge-label">The house feels too quiet</span>
+        </button>
+        <button class="urge-btn" data-urge="worried" role="radio" aria-checked="false">
+          <span class="urge-emoji">&#x1F4AD;</span>
+          <span class="urge-label">I'm worried about them</span>
+        </button>
+        <button class="urge-btn" data-urge="missing" role="radio" aria-checked="false">
+          <span class="urge-emoji">&#x1F49B;</span>
+          <span class="urge-label">I just miss my kid</span>
+        </button>
+        <button class="urge-btn" data-urge="needed" role="radio" aria-checked="false">
+          <span class="urge-emoji">&#x1F91D;</span>
+          <span class="urge-label">I want to feel needed</span>
+        </button>
+        <button class="urge-btn" data-urge="bored" role="radio" aria-checked="false">
+          <span class="urge-emoji">&#x23F3;</span>
+          <span class="urge-label">Honestly, I'm just bored</span>
+        </button>
+        <button class="urge-btn" data-urge="checking" role="radio" aria-checked="false">
+          <span class="urge-emoji">&#x1F4F1;</span>
+          <span class="urge-label">I just want to check in real quick</span>
+        </button>
+      </div>
+
+      <div id="urge-response" class="urge-response hidden" aria-live="polite">
+        <p class="response-text">You're not "just checking in." You're feeling <strong id="urge-name"></strong>.</p>
+        <p class="response-reassure">That's normal. That's human. And you don't have to act on it right now.</p>
+        <button class="btn-primary" onclick="goTo('step-2')">Next: Sit With It &rarr;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== STEP 2: SIT WITH IT ==================== -->
+  <section id="step-2" class="page" aria-label="Step 2: Sit with the feeling">
+    <div class="page-inner">
+      <div class="step-badge">Step 2 of 3</div>
+      <h2 class="step-title">Sit With It</h2>
+      <p class="step-intro">The urge to text usually peaks and fades in about 90 seconds. You just have to ride the wave.</p>
+
+      <div class="breath-container">
+        <div class="breath-circle" id="breath-circle" aria-label="Breathing guide">
+          <span class="breath-text" id="breath-text">Tap to start</span>
+          <span class="breath-count" id="breath-count"></span>
+        </div>
+        <p class="breath-instruction">Take 6 slow breaths with me.</p>
+        <button class="btn-breath" id="breath-start" onclick="startBreathing()" aria-label="Start breathing exercise">Start Breathing</button>
+      </div>
+
+      <div id="breath-done" class="breath-done hidden" aria-live="polite">
+        <p class="done-emoji" aria-hidden="true">&#x2728;</p>
+        <p class="done-text">You did it. The wave passed.</p>
+        <p class="done-sub">That feeling you had 90 seconds ago? It's already softer. You didn't need to text to get through it.</p>
+        <button class="btn-primary" onclick="goTo('step-3')">Next: Choose Your Move &rarr;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== STEP 3: CHOOSE YOUR MOVE ==================== -->
+  <section id="step-3" class="page" aria-label="Step 3: Choose what to do instead">
+    <div class="page-inner">
+      <div class="step-badge">Step 3 of 3</div>
+      <h2 class="step-title">Choose Your Move</h2>
+      <p class="step-intro">The urge passed. Now pick one thing to do instead of texting.</p>
+
+      <div class="move-grid">
+        <button class="move-card" data-move="journal" aria-label="Choose journaling">
+          <span class="move-icon">&#x1F4DD;</span>
+          <span class="move-name">Write one sentence</span>
+          <span class="move-desc">Open a notebook. Write how you're feeling. That's it, just one sentence.</span>
+        </button>
+        <button class="move-card" data-move="walk" aria-label="Choose walking">
+          <span class="move-icon">&#x1F6B6;</span>
+          <span class="move-name">Take a short walk</span>
+          <span class="move-desc">Around the house, around the block. Move your body, change the scenery.</span>
+        </button>
+        <button class="move-card" data-move="hands" aria-label="Choose hands activity">
+          <span class="move-icon">&#x1F331;</span>
+          <span class="move-name">Do something with your hands</span>
+          <span class="move-desc">Cook something, water a plant, organize a drawer. Keep your hands busy.</span>
+        </button>
+        <button class="move-card" data-move="friend" aria-label="Choose calling a friend">
+          <span class="move-icon">&#x260E;&#xFE0F;</span>
+          <span class="move-name">Call a friend</span>
+          <span class="move-desc">Not your kid. Someone who gets it. Connection is the cure, just not that one right now.</span>
+        </button>
+      </div>
+
+      <div id="move-response" class="move-response hidden" aria-live="polite">
+        <p class="move-affirm">Good choice. You chose yourself tonight.</p>
+        <button class="btn-primary" onclick="goTo('complete')">See What's Next &rarr;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== COMPLETE / CTA ==================== -->
+  <section id="complete" class="page" aria-label="Completion and next steps">
+    <div class="page-inner">
+      <div class="complete-emoji" aria-hidden="true">&#x2728;</div>
+      <h2 class="complete-title">You just did your first Quiet Night Reset.</h2>
+      <p class="complete-sub">You named it. You sat with it. You chose something different. That's not small, that's everything.</p>
+
+      <div class="cta-card">
+        <h3 class="cta-heading">Want a full 7-night system that makes this automatic?</h3>
+        <p class="cta-desc">The workbook walks you through 7 evenings of guided exercises, just like this one, so quiet nights stop feeling like something you have to survive.</p>
+        <a href="[PLACEHOLDER]" class="btn-cta" aria-label="Learn about the 7-Day Workbook">The 7-Day Check-In Loop Reset Workbook &rarr;</a>
+      </div>
+
+      <div class="cta-card cta-card-sage">
+        <h3 class="cta-heading">Need backup for the moment the urge hits?</h3>
+        <p class="cta-desc">10 phone-screen cards that meet you right where you are, with the exact words you need to hear instead of hitting send.</p>
+        <a href="[PLACEHOLDER]" class="btn-cta btn-cta-sage" aria-label="Learn about the SOS Card Deck">The Urge-to-Text SOS Card Deck &rarr;</a>
+      </div>
+
+      <div class="restart-block">
+        <button class="btn-restart" onclick="restart()" aria-label="Do the reset again">Do the Reset Again</button>
+      </div>
+
+      <div class="complete-sign">&#x2766; Susan &#x2766;</div>
+      <div class="cover-brand">Susan &nbsp;&middot;&nbsp; The Second Bloom</div>
+      <div class="disclaimer">This guide is educational content only. It is not therapy, medical advice, or a substitute for professional support.</div>
+    </div>
+  </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
