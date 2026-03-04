@@ -1,0 +1,1587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pause Before You Text — The 7-Day Urge Tracker | The Second Bloom</title>
+<meta name="description" content="A free 7-day interactive tracker to help you pause before you text — and start choosing yourself. By Susan at The Second Bloom.">
+<meta property="og:title" content="Pause Before You Text — The 7-Day Urge Tracker">
+<meta property="og:description" content="A free 7-day tracker to help you pause before you text and start choosing yourself. By Susan at The Second Bloom.">
+<meta property="og:url" content="https://thesndbloom.com/">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://thesndbloom.com/">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --terra: #8A9E7A;
+    --terra-pale: #F2F5EC;
+    --terra-light: #BFCFAA;
+    --sage: #8A9E7A;
+    --cream: #FDFCF8;
+    --tan: #EAE6DC;
+    --tan-dark: #C9C0B0;
+    --brown: #6B5A38;
+    --near-black: #332A1E;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #D4D8D0;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    color: var(--near-black);
+    padding: 36px 20px 60px;
+  }
+
+  /* ── TOP BAR ── */
+  .top-bar {
+    max-width: 95%;
+    margin: 0 auto 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .top-bar-left {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--brown);
+  }
+  .top-bar-left a {
+    color: var(--terra);
+    text-decoration: none;
+    border-bottom: 1px solid var(--terra-light);
+    transition: color 0.15s;
+  }
+  .top-bar-left a:hover { color: var(--brown); }
+
+  .top-bar-right { display: flex; gap: 10px; align-items: center; }
+  .top-btn {
+    background: none;
+    border: 1px solid var(--tan-dark);
+    border-radius: 4px;
+    padding: 9px 20px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--brown);
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .top-btn:hover { background: var(--tan); }
+  .top-btn.primary { background: var(--terra); border-color: var(--terra); color: white; }
+  .top-btn.primary:hover { opacity: 0.85; }
+  .top-brand-link {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--tan-dark);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .top-brand-link:hover { color: var(--terra); }
+
+  /* ── PAGE ── */
+  .page {
+    width: 95%;
+    margin: 0 auto 32px;
+    background: var(--cream);
+    padding: 48px 52px 44px;
+    box-shadow: 0 8px 48px rgba(51,42,30,0.15);
+    border-radius: 4px;
+  }
+
+  /* ── PAGE HEADER ── */
+  .page-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-bottom: 14px;
+    border-bottom: 2px solid var(--terra);
+    margin-bottom: 20px;
+  }
+  .eyebrow {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--terra);
+    margin-bottom: 6px;
+  }
+  .page-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 34px;
+    line-height: 1.1;
+    color: var(--near-black);
+    font-weight: 400;
+  }
+  .page-title em { font-style: italic; color: var(--terra); }
+  .title-sub { font-family: 'DM Serif Display', serif; font-style: italic; font-size: 16px; color: var(--brown); font-weight: 400; letter-spacing: 0.3px; }
+  .header-right { text-align: right; }
+  .header-sub {
+    font-size: 12px;
+    color: var(--brown);
+    line-height: 1.7;
+    font-style: italic;
+    font-family: 'DM Serif Display', serif;
+  }
+  .header-brand {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--tan-dark);
+    margin-top: 6px;
+  }
+  .header-brand a {
+    color: var(--tan-dark);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .header-brand a:hover { color: var(--terra); }
+  .page-num {
+    font-size: 10px;
+    color: var(--tan-dark);
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin-top: 4px;
+  }
+
+  /* ── INSTRUCTION STRIP ── */
+  .instruction-strip {
+    background: var(--terra-pale);
+    border-left: 4px solid var(--terra);
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    border-radius: 0 4px 4px 0;
+  }
+  .instruction-strip p {
+    font-size: 12px;
+    color: var(--brown);
+    line-height: 1.6;
+    font-style: italic;
+    font-family: 'DM Serif Display', serif;
+  }
+  .instruction-strip p strong {
+    font-style: normal;
+    font-weight: 600;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--near-black);
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  /* ── LEGEND ── */
+  .legend {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--tan);
+  }
+  .legend-item {
+    font-size: 11px;
+    color: var(--brown);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .legend-num {
+    background: var(--terra);
+    color: white;
+    font-size: 9px;
+    font-weight: 600;
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .legend-win {
+    font-size: 11px;
+    color: var(--sage);
+    font-weight: 500;
+    margin-left: 4px;
+    font-style: italic;
+  }
+
+  /* ── DAYS GRID: 3 columns on pages 1 & 2 ── */
+  .days-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  /* ── DAY CARD ── */
+  .day-card {
+    border: 1px solid var(--tan);
+    border-radius: 6px;
+    padding: 20px 20px 16px;
+    background: white;
+    position: relative;
+  }
+  .day-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 5px; height: 100%;
+    background: var(--terra);
+    border-radius: 6px 0 0 6px;
+  }
+
+  .day-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--tan);
+  }
+  .day-label {
+    font-family: 'DM Serif Display', serif;
+    font-size: 20px;
+    color: var(--terra);
+    font-weight: 400;
+  }
+  .date-field {
+    font-size: 11px;
+    color: var(--tan-dark);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .date-line {
+    display: inline-block;
+    border-bottom: 1px solid var(--tan);
+    width: 70px;
+    height: 12px;
+  }
+
+  /* ── ROW LABEL ── */
+  .row-label {
+    font-size: 9px;
+    font-weight: 600;
+    color: var(--terra);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 7px;
+  }
+  .q-row { margin-bottom: 13px; }
+
+  /* ── URGE SCALE ── */
+  .urge-row { display: flex; gap: 4px; flex-wrap: nowrap; }
+  .urge-circle {
+    width: 26px; height: 26px;
+    border: 1.5px solid var(--tan);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: var(--brown);
+    cursor: pointer;
+    transition: all 0.12s;
+    user-select: none;
+    background: white;
+    flex-shrink: 0;
+  }
+  .urge-circle:hover { border-color: var(--terra-light); background: var(--terra-pale); }
+  .urge-circle.selected { background: var(--terra); border-color: var(--terra); color: white; font-weight: 600; }
+
+  /* ── TRIGGER PILLS ── */
+  .trigger-row { display: flex; flex-wrap: wrap; gap: 5px; }
+  .trigger-pill {
+    border: 1px solid var(--tan);
+    border-radius: 20px;
+    padding: 4px 9px;
+    font-size: 10px;
+    color: var(--brown);
+    cursor: pointer;
+    transition: all 0.12s;
+    user-select: none;
+    background: white;
+  }
+  .trigger-pill:hover { border-color: var(--terra-light); background: var(--terra-pale); }
+  .trigger-pill.selected { background: var(--terra); border-color: var(--terra); color: white; }
+
+  /* ── CHECKBOX ITEMS ── */
+  .cb-row { display: flex; flex-wrap: wrap; gap: 4px 8px; }
+  .cb-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 10px;
+    color: var(--near-black);
+    cursor: pointer;
+    user-select: none;
+    padding: 3px 7px 3px 4px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    transition: all 0.12s;
+  }
+  .cb-item:hover { background: var(--terra-pale); border-color: var(--terra-light); }
+  .cb-item.selected { background: var(--terra-pale); border-color: var(--terra); }
+  .cb-box {
+    width: 14px; height: 14px;
+    border: 1.5px solid var(--tan-dark);
+    border-radius: 3px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.12s;
+    background: white;
+  }
+  .cb-item.selected .cb-box { background: var(--terra); border-color: var(--terra); }
+  .cb-item.selected .cb-box::after {
+    content: '';
+    display: block;
+    width: 6px; height: 3.5px;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+    transform: rotate(-45deg) translateY(-0.5px);
+  }
+
+  /* ── FEEL LINE ── */
+  .feel-line {
+    font-size: 11px;
+    color: var(--brown);
+    font-style: italic;
+    font-family: 'DM Serif Display', serif;
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+  }
+  .feel-input {
+    flex: 1;
+    border: none;
+    border-bottom: 1px solid var(--tan);
+    background: transparent;
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 11px;
+    color: var(--near-black);
+    padding: 3px 4px;
+    outline: none;
+    min-width: 0;
+  }
+  .feel-input:focus { border-bottom-color: var(--terra); }
+  .feel-input::placeholder { color: var(--tan-dark); }
+
+  /* ── WIN METER ── */
+  .win-row {
+    display: flex;
+    gap: 6px;
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px dashed var(--tan-dark);
+  }
+  .win-box {
+    flex: 1;
+    border: 1px solid var(--tan);
+    border-radius: 5px;
+    padding: 8px 4px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.12s;
+    background: white;
+    user-select: none;
+  }
+  .win-box:hover { border-color: var(--terra-light); background: var(--terra-pale); }
+  .win-box.selected { border-color: var(--terra); background: var(--terra-pale); }
+  .win-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 20px;
+    color: var(--terra);
+    display: block;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .win-text { font-size: 9px; color: var(--brown); line-height: 1.3; display: block; }
+
+  /* ── PAGE FOOTER ── */
+  .page-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+    margin-top: 20px;
+    border-top: 1px solid var(--tan);
+  }
+  .footer-quote {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 11px;
+    color: var(--brown);
+  }
+  .footer-nav {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--tan-dark);
+  }
+  .footer-brand-link {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--tan-dark);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .footer-brand-link:hover { color: var(--terra); }
+
+  /* ── PAGE 3: Day 7 full width + review + CTA ── */
+
+  /* Day 7 full-width card */
+  .day7-card {
+    border: 1px solid var(--tan);
+    border-radius: 6px;
+    padding: 20px 24px 16px;
+    background: white;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  .day7-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 5px; height: 100%;
+    background: var(--terra);
+    border-radius: 6px 0 0 6px;
+  }
+  /* Day 7 internals laid out in 2 columns */
+  .day7-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 36px;
+  }
+  .day7-full { grid-column: 1 / -1; }
+
+  /* ── REVIEW BOX ── */
+  .review-box {
+    border: 1px solid var(--tan);
+    border-radius: 6px;
+    padding: 22px 24px;
+    background: var(--terra-pale);
+    margin-bottom: 20px;
+  }
+  .review-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 20px;
+    color: var(--near-black);
+    font-weight: 400;
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--tan-dark);
+  }
+  .review-title em { font-style: italic; color: var(--terra); }
+
+  .review-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px 32px;
+  }
+  .review-q-label {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--terra);
+    margin-bottom: 8px;
+    display: block;
+  }
+  .review-pills { display: flex; gap: 6px; flex-wrap: wrap; }
+  .review-pill {
+    border: 1px solid var(--tan-dark);
+    border-radius: 20px;
+    padding: 6px 16px;
+    font-size: 12px;
+    color: var(--brown);
+    cursor: pointer;
+    background: white;
+    transition: all 0.12s;
+    user-select: none;
+  }
+  .review-pill:hover { border-color: var(--terra-light); }
+  .review-pill.selected { background: var(--terra); border-color: var(--terra); color: white; }
+
+  .review-input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--tan-dark);
+    background: transparent;
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 12px;
+    color: var(--near-black);
+    padding: 5px 2px;
+    outline: none;
+    display: block;
+    margin-top: 6px;
+  }
+  .review-input:focus { border-bottom-color: var(--terra); }
+  .review-input::placeholder { color: var(--tan-dark); }
+  .review-input + .review-input { margin-top: 8px; }
+
+  /* ── CTA STRIP ── */
+  .cta-strip {
+    background: var(--terra);
+    border-radius: 6px;
+    padding: 22px 28px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+  }
+  .cta-strip-text { flex: 1; }
+  .cta-eyebrow {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 7px;
+  }
+  .cta-strip p {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 17px;
+    color: white;
+    line-height: 1.65;
+    margin: 0;
+  }
+  .cta-strip p strong {
+    font-style: normal;
+    font-weight: 600;
+    color: white;
+  }
+  .cta-link-btn {
+    flex-shrink: 0;
+    background: white;
+    color: var(--terra);
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: opacity 0.2s;
+    white-space: nowrap;
+    letter-spacing: 0.3px;
+  }
+  .cta-link-btn:hover { opacity: 0.88; }
+
+  /* ── SAVE BANNER ── */
+  .save-banner {
+    max-width: 95%;
+    margin: 0 auto 20px;
+    background: var(--terra-pale);
+    border: 1px solid var(--terra-light);
+    border-radius: 5px;
+    padding: 10px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .save-banner-text {
+    font-size: 12px;
+    color: var(--brown);
+    font-style: italic;
+    font-family: 'DM Serif Display', serif;
+  }
+  .save-banner-text strong {
+    font-style: normal;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--near-black);
+  }
+  #save-status {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--terra);
+    white-space: nowrap;
+    transition: opacity 0.3s;
+  }
+
+  /* ── TOAST ── */
+  .toast {
+    position: fixed;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%) translateY(16px);
+    background: var(--near-black);
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    padding: 10px 22px;
+    border-radius: 4px;
+    opacity: 0;
+    transition: all 0.25s ease;
+    pointer-events: none;
+    white-space: nowrap;
+    z-index: 999;
+  }
+  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+  /* ── PRINT ── */
+  @media print {
+    body { background: white; padding: 0; }
+    .top-bar, .save-banner { display: none; }
+    .page {
+      width: 100%;
+      padding: 0.45in 0.5in 0.4in;
+      box-shadow: none;
+      border-radius: 0;
+      margin: 0;
+      page-break-after: always;
+    }
+    .page:last-of-type { page-break-after: auto; }
+    .toast { display: none; }
+    /* Make links readable in print */
+    .cta-link-btn::after { content: " (thesndbloom.com)"; font-size: 11px; font-weight: 400; opacity: 0.7; }
+    .footer-brand-link, .header-brand a { color: var(--tan-dark) !important; }
+    @page { size: letter portrait; margin: 0; }
+  }
+
+  /* ── INSTRUCTIONS PAGE ── */
+  .intro-hero {
+    text-align: center;
+    padding: 10px 0 28px;
+    border-bottom: 2px solid var(--terra);
+    margin-bottom: 28px;
+  }
+  .intro-hero .eyebrow { justify-content: center; display: block; margin-bottom: 10px; }
+  .intro-hero-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 38px;
+    line-height: 1.1;
+    color: var(--near-black);
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+  .intro-hero-title em { font-style: italic; color: var(--terra); }
+  .intro-hero-sub {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--brown);
+    margin-bottom: 6px;
+  }
+  .intro-hero-byline {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--tan-dark);
+  }
+  .intro-hero-byline a { color: var(--tan-dark); text-decoration: none; transition: color 0.15s; }
+  .intro-hero-byline a:hover { color: var(--terra); }
+
+  .intro-two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 40px;
+    margin-bottom: 24px;
+  }
+  .intro-section-label {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--terra);
+    margin-bottom: 14px;
+    display: block;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--terra-light);
+  }
+  .intro-step {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 14px;
+    align-items: flex-start;
+  }
+  .intro-step-num {
+    background: var(--terra);
+    color: white;
+    font-family: 'DM Serif Display', serif;
+    font-size: 15px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .intro-step-body {}
+  .intro-step-title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--near-black);
+    margin-bottom: 3px;
+  }
+  .intro-step-desc {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 12px;
+    color: var(--brown);
+    line-height: 1.6;
+  }
+
+  .field-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 28px;
+    margin-bottom: 0;
+  }
+  .field-item {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .field-num {
+    background: var(--terra);
+    color: white;
+    font-size: 9px;
+    font-weight: 700;
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .field-body {}
+  .field-title {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--near-black);
+    margin-bottom: 2px;
+  }
+  .field-desc {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 11px;
+    color: var(--brown);
+    line-height: 1.5;
+  }
+
+  .win-explainer {
+    background: white;
+    border: 1px solid var(--tan);
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin-top: 20px;
+    grid-column: 1 / -1;
+  }
+  .win-explainer-title {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--terra);
+    margin-bottom: 12px;
+    display: block;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--terra-light);
+  }
+  .win-explainer-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .win-explainer-item {
+    flex: 1;
+    min-width: 100px;
+    text-align: center;
+    border: 1px solid var(--tan);
+    border-radius: 5px;
+    padding: 10px 8px;
+    background: var(--terra-pale);
+  }
+  .win-explainer-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    color: var(--terra);
+    display: block;
+    margin-bottom: 3px;
+  }
+  .win-explainer-label {
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--near-black);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .win-explainer-note {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 10px;
+    color: var(--brown);
+    line-height: 1.4;
+  }
+
+  .intro-tips {
+    background: var(--terra-pale);
+    border-left: 4px solid var(--terra);
+    border-radius: 0 6px 6px 0;
+    padding: 14px 18px;
+    margin-top: 20px;
+    grid-column: 1 / -1;
+  }
+  .intro-tips-label {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--terra);
+    margin-bottom: 10px;
+    display: block;
+  }
+  .intro-tips-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px 20px;
+  }
+  .intro-tip {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 11.5px;
+    color: var(--brown);
+    line-height: 1.55;
+  }
+  .intro-tip strong {
+    font-style: normal;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--near-black);
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  .intro-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+    margin-top: 20px;
+    border-top: 1px solid var(--tan);
+  }
+  .intro-footer-quote {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 11px;
+    color: var(--brown);
+  }
+  .intro-footer-nav {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--tan-dark);
+  }
+
+  @media (max-width: 600px) {
+    .page { width: 100%; padding: 28px 20px 28px; }
+    .days-grid { grid-template-columns: 1fr; }
+    .day7-inner { grid-template-columns: 1fr; }
+    .review-grid { grid-template-columns: 1fr; }
+    .cta-strip { flex-direction: column; text-align: center; }
+    .save-banner { flex-direction: column; text-align: center; }
+    .intro-two-col { grid-template-columns: 1fr; }
+    .field-grid { grid-template-columns: 1fr; }
+    .intro-tips-row { grid-template-columns: 1fr; }
+    .win-explainer-row { gap: 6px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="top-bar-left">
+    Pause Before You Text &nbsp;·&nbsp; 7-Day Urge Tracker &nbsp;·&nbsp;
+    <a href="https://thesndbloom.com/" target="_blank" rel="noopener">thesndbloom.com</a>
+  </div>
+  <div class="top-bar-right">
+    <a class="top-brand-link" href="https://thesndbloom.com/" target="_blank" rel="noopener">The Second Bloom</a>
+    <button class="top-btn" onclick="clearAll()">↺ &nbsp;Clear All</button>
+    <button class="top-btn primary" onclick="window.print()">🖨 &nbsp;Print All 4 Pages</button>
+  </div>
+</div>
+
+<!-- SAVE BANNER -->
+<div class="save-banner">
+  <div class="save-banner-text"><strong>Auto-save on:</strong> Your answers are saved to this browser — come back each evening and pick up where you left off.</div>
+  <span id="save-status"></span>
+</div>
+
+
+<!-- ══════════════ INSTRUCTIONS PAGE ══════════════ -->
+<div class="page">
+
+  <div class="intro-hero">
+    <div class="eyebrow">7 Days &nbsp;·&nbsp; 2 Minutes a Day</div>
+    <div class="intro-hero-title">Pause Before You <em>Text</em></div>
+    <div class="intro-hero-sub">The 7-Day Urge Tracker — How to Use This</div>
+    <div class="intro-hero-byline">By Susan &nbsp;·&nbsp; <a href="https://thesndbloom.com/" target="_blank" rel="noopener">The Second Bloom</a></div>
+  </div>
+
+  <div class="intro-two-col">
+
+    <!-- LEFT: How to use -->
+    <div>
+      <span class="intro-section-label">How to Use — Step by Step</span>
+
+      <div class="intro-step">
+        <div class="intro-step-num">1</div>
+        <div class="intro-step-body">
+          <div class="intro-step-title">Open this each evening</div>
+          <div class="intro-step-desc">Set a reminder if it helps — 8pm, 9pm, whenever your evenings tend to get quiet. This takes 2 minutes or less.</div>
+        </div>
+      </div>
+
+      <div class="intro-step">
+        <div class="intro-step-num">2</div>
+        <div class="intro-step-body">
+          <div class="intro-step-title">Find today's day card</div>
+          <div class="intro-step-desc">Days 1–3 are on Page 1, Days 4–6 on Page 2, Day 7 on Page 3. Scroll down to reach them — or use Print to have a paper copy ready.</div>
+        </div>
+      </div>
+
+      <div class="intro-step">
+        <div class="intro-step-num">3</div>
+        <div class="intro-step-body">
+          <div class="intro-step-title">Click or tap your answers</div>
+          <div class="intro-step-desc">Every circle, pill, and checkbox is clickable. Tap the urge number that felt most true. Tap any triggers that applied. No right or wrong answers.</div>
+        </div>
+      </div>
+
+      <div class="intro-step">
+        <div class="intro-step-num">4</div>
+        <div class="intro-step-body">
+          <div class="intro-step-title">Type in the "Tonight I feel" line</div>
+          <div class="intro-step-desc">Just a word or a sentence — whatever is honest. This field is for you, not for anyone else to read.</div>
+        </div>
+      </div>
+
+      <div class="intro-step">
+        <div class="intro-step-num">5</div>
+        <div class="intro-step-body">
+          <div class="intro-step-title">Pick your Win Meter score</div>
+          <div class="intro-step-desc">At the bottom of each day. Even a 1 — "I noticed" — counts. You don't have to have paused perfectly to log a win.</div>
+        </div>
+      </div>
+
+      <div class="intro-step">
+        <div class="intro-step-num">6</div>
+        <div class="intro-step-body">
+          <div class="intro-step-title">Come back tomorrow night</div>
+          <div class="intro-step-desc">Your answers auto-save in this browser. Close the tab, reopen it the next evening, and everything will still be here.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: What each field means -->
+    <div>
+      <span class="intro-section-label">What Each Tracker Field Means</span>
+      <div class="field-grid">
+
+        <div class="field-item">
+          <div class="field-num">1</div>
+          <div class="field-body">
+            <div class="field-title">Urge Level (0–10)</div>
+            <div class="field-desc">How strong was the pull to text — before you did anything? 0 = barely felt it. 10 = almost impossible to resist.</div>
+          </div>
+        </div>
+
+        <div class="field-item">
+          <div class="field-num">2</div>
+          <div class="field-body">
+            <div class="field-title">What Triggered It?</div>
+            <div class="field-desc">What set the urge off — a quiet moment, no reply, a memory? Select all that apply. Patterns become visible fast.</div>
+          </div>
+        </div>
+
+        <div class="field-item">
+          <div class="field-num">3</div>
+          <div class="field-body">
+            <div class="field-title">Paused 3 Minutes First?</div>
+            <div class="field-desc">Did you wait at least 3 minutes before deciding whether to text? Yes or no — no judgment either way. Just noticing.</div>
+          </div>
+        </div>
+
+        <div class="field-item">
+          <div class="field-num">4</div>
+          <div class="field-body">
+            <div class="field-title">What Did I Do Instead?</div>
+            <div class="field-desc">If you paused, what filled those 3 minutes? Pick anything that happened — even if it didn't feel like a big deal.</div>
+          </div>
+        </div>
+
+        <div class="field-item">
+          <div class="field-num">5</div>
+          <div class="field-body">
+            <div class="field-title">Did I Text?</div>
+            <div class="field-desc">"No" is a win. "Yes, intentional" is still a win. "Yes, emotional" is honest data — and it's still data, not failure.</div>
+          </div>
+        </div>
+
+        <div class="field-item">
+          <div class="field-num">6</div>
+          <div class="field-body">
+            <div class="field-title">Tonight I Feel</div>
+            <div class="field-desc">One word, a phrase, a full sentence. Write whatever is true. This is your private check-in, not a performance.</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Win Meter explainer -->
+      <div class="win-explainer">
+        <span class="win-explainer-title">The Win Meter — What the Scores Mean</span>
+        <div class="win-explainer-row">
+          <div class="win-explainer-item">
+            <span class="win-explainer-num">0</span>
+            <span class="win-explainer-label">I Spiraled</span>
+            <span class="win-explainer-note">Texted without thinking. That's okay — you're still here tracking it.</span>
+          </div>
+          <div class="win-explainer-item">
+            <span class="win-explainer-num">1</span>
+            <span class="win-explainer-label">I Noticed</span>
+            <span class="win-explainer-note">You caught the urge before it took over. That awareness is everything.</span>
+          </div>
+          <div class="win-explainer-item">
+            <span class="win-explainer-num">2</span>
+            <span class="win-explainer-label">I Paused</span>
+            <span class="win-explainer-note">You stopped and waited. That gap between urge and action? That's growth.</span>
+          </div>
+          <div class="win-explainer-item">
+            <span class="win-explainer-num">3</span>
+            <span class="win-explainer-label">I Chose</span>
+            <span class="win-explainer-note">You decided on purpose — text or not. That's self-leadership.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tips — full width -->
+    <div class="intro-tips">
+      <span class="intro-tips-label">Tips for Getting the Most Out of This</span>
+      <div class="intro-tips-row">
+        <div class="intro-tip"><strong>Don't wait for a "bad" day</strong>Even low-urge days are worth tracking. You'll see how your baseline shifts across 7 days.</div>
+        <div class="intro-tip"><strong>Printed or digital — both work</strong>Click "Print All 3 Pages" from the top bar to get a paper version. Use a pen for the printed copy.</div>
+        <div class="intro-tip"><strong>The review on Day 7 matters</strong>Don't skip the Mini-Review on Page 3. It's where you find your real pattern — and your next step.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="intro-footer">
+    <span class="intro-footer-quote">♡ &nbsp;The goal isn't to stop caring. It's to stop reacting.</span>
+    <span class="intro-footer-nav">Continue → Page 1 &nbsp;·&nbsp; Days 1 – 3</span>
+  </div>
+
+</div>
+
+
+<!-- ══════════════ PAGE 1 ══════════════ -->
+<div class="page">
+  <div class="page-header">
+    <div>
+      <div class="eyebrow">7 Days &nbsp;·&nbsp; 2 Minutes a Day</div>
+      <div class="page-title">Pause Before You <em>Text</em><br><span class="title-sub">The 7-Day Urge Tracker</span></div>
+    </div>
+    <div class="header-right">
+      <div class="header-sub">Don't try to be perfect. Just track.<br>Your only job: pause once before you text.</div>
+      <div class="header-brand">Susan &nbsp;·&nbsp; <a href="https://thesndbloom.com/" target="_blank" rel="noopener">The Second Bloom</a></div>
+      <div class="page-num">Page 1 of 3 &nbsp;·&nbsp; Days 1 – 3</div>
+    </div>
+  </div>
+
+  <div class="instruction-strip">
+    <p><strong>How to use:</strong> Tap or click your answers each evening — before you text, not after. Come back the next night and fill in the next day. Everything stays as you click it.</p>
+  </div>
+
+  <div class="legend">
+    <div class="legend-item"><span class="legend-num">1</span>Urge level 0–10</div>
+    <div class="legend-item"><span class="legend-num">2</span>What triggered it</div>
+    <div class="legend-item"><span class="legend-num">3</span>Paused 3 min first?</div>
+    <div class="legend-item"><span class="legend-num">4</span>What I did instead</div>
+    <div class="legend-item"><span class="legend-num">5</span>Did I text?</div>
+    <div class="legend-item"><span class="legend-num">6</span>Tonight I feel</div>
+    <div class="legend-win">↓ Win Meter at the bottom of each day</div>
+  </div>
+
+  <div class="days-grid" id="grid-p1"></div>
+
+  <div class="page-footer">
+    <span class="footer-quote">♡ &nbsp;You don't have to be perfect. You just have to pause.</span>
+    <span class="footer-nav">Continue → Page 2 &nbsp;·&nbsp; Days 4 – 6</span>
+  </div>
+</div>
+
+
+<!-- ══════════════ PAGE 2 ══════════════ -->
+<div class="page">
+  <div class="page-header">
+    <div>
+      <div class="eyebrow">7-Day Urge Tracker &nbsp;·&nbsp; Continued</div>
+      <div class="page-title">Pause Before You <em>Text</em><br><span class="title-sub">The 7-Day Urge Tracker</span></div>
+    </div>
+    <div class="header-right">
+      <div class="header-sub">You came back. That's the whole data point.<br>Keep going — you're past the middle.</div>
+      <div class="header-brand">Susan &nbsp;·&nbsp; <a href="https://thesndbloom.com/" target="_blank" rel="noopener">The Second Bloom</a></div>
+      <div class="page-num">Page 2 of 3 &nbsp;·&nbsp; Days 4 – 6</div>
+    </div>
+  </div>
+
+  <div class="days-grid" id="grid-p2"></div>
+
+  <div class="page-footer">
+    <span class="footer-quote">♡ &nbsp;Each pause is proof that the loop doesn't run you — you do.</span>
+    <span class="footer-nav">Continue → Page 3 &nbsp;·&nbsp; Day 7 + Review</span>
+  </div>
+</div>
+
+
+<!-- ══════════════ PAGE 3 ══════════════ -->
+<div class="page">
+  <div class="page-header">
+    <div>
+      <div class="eyebrow">7-Day Urge Tracker &nbsp;·&nbsp; Final Day</div>
+      <div class="page-title">Pause Before You <em>Text</em><br><span class="title-sub">The 7-Day Urge Tracker</span></div>
+    </div>
+    <div class="header-right">
+      <div class="header-sub">Last day. Then look back and see what you built.<br>The mini-review is right below.</div>
+      <div class="header-brand">Susan &nbsp;·&nbsp; <a href="https://thesndbloom.com/" target="_blank" rel="noopener">The Second Bloom</a></div>
+      <div class="page-num">Page 3 of 3 &nbsp;·&nbsp; Day 7 + Mini-Review</div>
+    </div>
+  </div>
+
+  <!-- DAY 7: full width, 2-col internal layout -->
+  <div class="day7-card">
+    <div class="day-card-header day7-full">
+      <div class="day-label">Day 7</div>
+      <div class="date-field">Date <span class="date-line"></span></div>
+    </div>
+    <div class="day7-inner" id="day7-inner">
+      <!-- injected by JS -->
+    </div>
+  </div>
+
+  <!-- MINI REVIEW -->
+  <div class="review-box">
+    <div class="review-title">Day 7 <em>Mini-Review</em> &nbsp;—&nbsp; Circle what's true, write what you need</div>
+    <div class="review-grid">
+
+      <div>
+        <span class="review-q-label">My urge level this week is</span>
+        <div class="review-pills">
+          <span class="review-pill" onclick="selectReview(this,'urge')">lower than Day 1</span>
+          <span class="review-pill" onclick="selectReview(this,'urge')">about the same</span>
+          <span class="review-pill" onclick="selectReview(this,'urge')">higher</span>
+        </div>
+      </div>
+
+      <div>
+        <span class="review-q-label">My evenings now feel</span>
+        <div class="review-pills">
+          <span class="review-pill" onclick="selectReview(this,'evenings')">lighter</span>
+          <span class="review-pill" onclick="selectReview(this,'evenings')">about the same</span>
+          <span class="review-pill" onclick="selectReview(this,'evenings')">heavier</span>
+        </div>
+      </div>
+
+      <div>
+        <span class="review-q-label">The thing that helped most this week</span>
+        <input class="review-input" id="review-helped-1" type="text" placeholder="What actually moved the needle for you?">
+        <input class="review-input" id="review-helped-2" type="text" placeholder="">
+      </div>
+
+      <div>
+        <span class="review-q-label">The moment I still need the most support</span>
+        <input class="review-input" id="review-support-1" type="text" placeholder="Name it. Knowing it is half the plan.">
+        <input class="review-input" id="review-support-2" type="text" placeholder="">
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-strip">
+    <div class="cta-strip-text">
+      <div class="cta-eyebrow">Your next step</div>
+      <p>If you want a step-by-step plan for what to do <em>in the moment</em> — and what to text instead — <strong>the Empty Nest Loop Reset + Urge-to-Text SOS Cards</strong> is exactly where you go next.</p>
+    </div>
+    <a href="https://thesndbloom.com/" class="cta-link-btn" target="_blank" rel="noopener">Visit The Second Bloom →</a>
+  </div>
+
+  <div class="page-footer">
+    <span class="footer-quote">♡ &nbsp;Seven days of pausing is seven days of choosing yourself.</span>
+    <a class="footer-brand-link" href="https://thesndbloom.com/" target="_blank" rel="noopener">Susan &nbsp;·&nbsp; The Second Bloom</a>
+  </div>
+</div>
+
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script>
+  const TRIGGERS = ['Quiet evening', 'No reply', 'Reminded me', 'Weekend', 'Mind racing', 'Other'];
+  const INSTEAD  = ['Deep breath', 'Walk away', 'Drink water', 'Quick task', 'Journal', 'Other'];
+  const TEXTED   = ['No', 'Yes, intentional', 'Yes, emotional'];
+  const WIN_OPTS = [['0','I spiraled'], ['1','I noticed'], ['2','I paused'], ['3','I chose']];
+
+  const STORAGE_KEY = 'pbtx_v4_state';
+
+  // ── BUILD DAY CARD HTML ─────────────────────────
+  function buildDayCard(d, container, twoCol) {
+    const id = `d${d}`;
+
+    const header = `
+      <div class="day-card-header${twoCol ? ' day7-full' : ''}">
+        <div class="day-label">Day ${d}</div>
+        <div class="date-field">Date <span class="date-line"></span></div>
+      </div>`;
+
+    const q1 = `
+      <div class="q-row">
+        <span class="row-label">1 — Urge level</span>
+        <div class="urge-row" id="urge-${id}">
+          ${[0,1,2,3,4,5,6,7,8,9,10].map(n =>
+            `<div class="urge-circle" onclick="selectUrge('${id}',this,${n})">${n}</div>`
+          ).join('')}
+        </div>
+      </div>`;
+
+    const q2 = `
+      <div class="q-row">
+        <span class="row-label">2 — What triggered it?</span>
+        <div class="trigger-row" id="trig-${id}">
+          ${TRIGGERS.map(t => `<span class="trigger-pill" onclick="togglePill(this)">${t}</span>`).join('')}
+        </div>
+      </div>`;
+
+    const q3 = `
+      <div class="q-row">
+        <span class="row-label">3 — Paused 3 minutes first?</span>
+        <div class="cb-row" id="pause-${id}">
+          <span class="cb-item" onclick="selectCB(this)"><span class="cb-box"></span>Yes</span>
+          <span class="cb-item" onclick="selectCB(this)"><span class="cb-box"></span>No</span>
+        </div>
+      </div>`;
+
+    const q4 = `
+      <div class="q-row">
+        <span class="row-label">4 — What did I do instead?</span>
+        <div class="cb-row" id="instead-${id}">
+          ${INSTEAD.map(t => `<span class="cb-item" onclick="toggleCB(this)"><span class="cb-box"></span>${t}</span>`).join('')}
+        </div>
+      </div>`;
+
+    const q5 = `
+      <div class="q-row">
+        <span class="row-label">5 — Did I text?</span>
+        <div class="cb-row" id="texted-${id}">
+          ${TEXTED.map(t => `<span class="cb-item" onclick="selectCB(this)"><span class="cb-box"></span>${t}</span>`).join('')}
+        </div>
+      </div>`;
+
+    const q6 = `
+      <div class="q-row">
+        <span class="feel-line">
+          <span>Tonight I feel</span>
+          <input class="feel-input" id="feel-${id}" type="text" placeholder="…" oninput="saveState()">
+        </span>
+      </div>`;
+
+    const winMeter = `
+      <div class="win-row" id="win-${id}">
+        ${WIN_OPTS.map(([n,t]) =>
+          `<div class="win-box" onclick="selectWin('${id}',this)">
+            <span class="win-num">${n}</span>
+            <span class="win-text">${t}</span>
+          </div>`
+        ).join('')}
+      </div>`;
+
+    if (twoCol) {
+      container.innerHTML = `
+        ${header}
+        <div>${q1}${q2}${q3}</div>
+        <div>${q4}${q5}${q6}${winMeter}</div>`;
+    } else {
+      const card = document.createElement('div');
+      card.className = 'day-card';
+      card.innerHTML = header + q1 + q2 + q3 + q4 + q5 + q6 + winMeter;
+      container.appendChild(card);
+    }
+  }
+
+  // Inject Days 1–3 → page 1
+  const g1 = document.getElementById('grid-p1');
+  for (let d = 1; d <= 3; d++) buildDayCard(d, g1, false);
+
+  // Inject Days 4–6 → page 2
+  const g2 = document.getElementById('grid-p2');
+  for (let d = 4; d <= 6; d++) buildDayCard(d, g2, false);
+
+  // Inject Day 7 → page 3 (2-col layout)
+  buildDayCard(7, document.getElementById('day7-inner'), true);
+
+
+  // ── INTERACTIONS ──────────────────────────────
+
+  function selectUrge(id, el, val) {
+    document.querySelectorAll(`#urge-${id} .urge-circle`).forEach(c => c.classList.remove('selected'));
+    el.classList.add('selected');
+    showToast(`Day ${id.slice(1)} urge: ${val} / 10`);
+    saveState();
+  }
+
+  function togglePill(el) {
+    el.classList.toggle('selected');
+    saveState();
+  }
+
+  function selectCB(el) {
+    el.closest('.cb-row').querySelectorAll('.cb-item').forEach(i => i.classList.remove('selected'));
+    el.classList.add('selected');
+    saveState();
+  }
+
+  function toggleCB(el) {
+    el.classList.toggle('selected');
+    saveState();
+  }
+
+  function selectWin(id, el) {
+    document.querySelectorAll(`#win-${id} .win-box`).forEach(b => b.classList.remove('selected'));
+    el.classList.add('selected');
+    const score = el.querySelector('.win-num').textContent;
+    const label = el.querySelector('.win-text').textContent;
+    showToast(`Day ${id.slice(1)} win: ${score} — ${label}`);
+    saveState();
+  }
+
+  function selectReview(el, group) {
+    el.closest('.review-pills').querySelectorAll('.review-pill').forEach(p => p.classList.remove('selected'));
+    el.classList.add('selected');
+    saveState();
+  }
+
+  function clearAll() {
+    if (!confirm('Clear all answers on all 3 pages and start fresh?')) return;
+    document.querySelectorAll('.urge-circle, .trigger-pill, .win-box, .review-pill').forEach(el => el.classList.remove('selected'));
+    document.querySelectorAll('.cb-item').forEach(el => el.classList.remove('selected'));
+    document.querySelectorAll('.feel-input, .review-input').forEach(el => el.value = '');
+    try { localStorage.removeItem(STORAGE_KEY); } catch(e) {}
+    showToast('All answers cleared ↺');
+    setSaveStatus('');
+  }
+
+  let toastTimer;
+  function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => t.classList.remove('show'), 1900);
+  }
+
+
+  // ── AUTO-SAVE TO LOCALSTORAGE ─────────────────
+
+  let saveTimer;
+  function saveState() {
+    clearTimeout(saveTimer);
+    setSaveStatus('Saving…');
+    saveTimer = setTimeout(() => {
+      try {
+        const state = {};
+
+        // Urge circles
+        document.querySelectorAll('[id^="urge-"]').forEach(row => {
+          const id = row.id;
+          const sel = row.querySelector('.urge-circle.selected');
+          state[id] = sel ? sel.textContent : null;
+        });
+
+        // Trigger pills
+        document.querySelectorAll('[id^="trig-"]').forEach(row => {
+          state[row.id] = [...row.querySelectorAll('.trigger-pill.selected')].map(el => el.textContent);
+        });
+
+        // Pause checkboxes
+        document.querySelectorAll('[id^="pause-"]').forEach(row => {
+          const sel = row.querySelector('.cb-item.selected');
+          state[row.id] = sel ? sel.textContent.trim() : null;
+        });
+
+        // Instead checkboxes
+        document.querySelectorAll('[id^="instead-"]').forEach(row => {
+          state[row.id] = [...row.querySelectorAll('.cb-item.selected')].map(el => el.textContent.trim());
+        });
+
+        // Texted checkboxes
+        document.querySelectorAll('[id^="texted-"]').forEach(row => {
+          const sel = row.querySelector('.cb-item.selected');
+          state[row.id] = sel ? sel.textContent.trim() : null;
+        });
+
+        // Feel inputs
+        document.querySelectorAll('[id^="feel-"]').forEach(inp => {
+          state[inp.id] = inp.value;
+        });
+
+        // Win meter
+        document.querySelectorAll('[id^="win-"]').forEach(row => {
+          const sel = row.querySelector('.win-box.selected');
+          state[row.id] = sel ? sel.querySelector('.win-num').textContent : null;
+        });
+
+        // Review pills
+        document.querySelectorAll('.review-pill.selected').forEach(el => {
+          const group = el.getAttribute('onclick').match(/'([^']+)'\)/)?.[1];
+          if (group) state['review_' + group] = el.textContent;
+        });
+
+        // Review inputs
+        ['review-helped-1','review-helped-2','review-support-1','review-support-2'].forEach(id => {
+          const el = document.getElementById(id);
+          if (el) state[id] = el.value;
+        });
+
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+        setSaveStatus('✓ Saved');
+        setTimeout(() => setSaveStatus(''), 2000);
+      } catch(e) {
+        setSaveStatus('');
+      }
+    }, 600);
+  }
+
+  function setSaveStatus(msg) {
+    const el = document.getElementById('save-status');
+    if (el) el.textContent = msg;
+  }
+
+  function restoreState() {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return;
+      const state = JSON.parse(raw);
+
+      // Urge circles
+      document.querySelectorAll('[id^="urge-"]').forEach(row => {
+        const val = state[row.id];
+        if (val !== null && val !== undefined) {
+          row.querySelectorAll('.urge-circle').forEach(c => {
+            if (c.textContent === val) c.classList.add('selected');
+          });
+        }
+      });
+
+      // Trigger pills
+      document.querySelectorAll('[id^="trig-"]').forEach(row => {
+        const vals = state[row.id] || [];
+        row.querySelectorAll('.trigger-pill').forEach(p => {
+          if (vals.includes(p.textContent)) p.classList.add('selected');
+        });
+      });
+
+      // Pause checkboxes
+      document.querySelectorAll('[id^="pause-"]').forEach(row => {
+        const val = state[row.id];
+        if (val) row.querySelectorAll('.cb-item').forEach(item => {
+          if (item.textContent.trim() === val) item.classList.add('selected');
+        });
+      });
+
+      // Instead checkboxes
+      document.querySelectorAll('[id^="instead-"]').forEach(row => {
+        const vals = state[row.id] || [];
+        row.querySelectorAll('.cb-item').forEach(item => {
+          if (vals.includes(item.textContent.trim())) item.classList.add('selected');
+        });
+      });
+
+      // Texted checkboxes
+      document.querySelectorAll('[id^="texted-"]').forEach(row => {
+        const val = state[row.id];
+        if (val) row.querySelectorAll('.cb-item').forEach(item => {
+          if (item.textContent.trim() === val) item.classList.add('selected');
+        });
+      });
+
+      // Feel inputs
+      document.querySelectorAll('[id^="feel-"]').forEach(inp => {
+        if (state[inp.id] !== undefined) inp.value = state[inp.id];
+      });
+
+      // Win meter
+      document.querySelectorAll('[id^="win-"]').forEach(row => {
+        const val = state[row.id];
+        if (val !== null && val !== undefined) {
+          row.querySelectorAll('.win-box').forEach(box => {
+            if (box.querySelector('.win-num').textContent === val) box.classList.add('selected');
+          });
+        }
+      });
+
+      // Review pills
+      document.querySelectorAll('.review-pill').forEach(el => {
+        const group = el.getAttribute('onclick').match(/'([^']+)'\)/)?.[1];
+        if (group && state['review_' + group] === el.textContent) el.classList.add('selected');
+      });
+
+      // Review inputs
+      ['review-helped-1','review-helped-2','review-support-1','review-support-2'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el && state[id] !== undefined) el.value = state[id];
+      });
+
+      setSaveStatus('✓ Restored');
+      setTimeout(() => setSaveStatus(''), 2000);
+    } catch(e) {}
+  }
+
+  // Add save triggers to review inputs
+  document.querySelectorAll('.review-input').forEach(inp => {
+    inp.addEventListener('input', saveState);
+  });
+
+  // Restore on load
+  restoreState();
+</script>
+</body>
+</html>
